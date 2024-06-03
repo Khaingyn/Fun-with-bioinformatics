@@ -2,8 +2,7 @@
 Luu trữ code, nguồn tài nguyên hay ho, trong quá trình học
 
 # R language:
-### 1. Storage for self-study
-
+### [1. Storage for self-study](https://github.com/Khaingyn/Fun/blob/main/R_script/R_script.md)
 ### 2. Reference
 #### Youtube
 * [Data visualisation using ggplot with R Programming - R Programming 101](https://youtube.com/playlist?list=PLtL57Fdbwb_C6RS0JtBojTNOMVlgpeJkS&si=pBm-3_h7c3u4oW5Q)
@@ -18,11 +17,7 @@ Luu trữ code, nguồn tài nguyên hay ho, trong quá trình học
 * [Function reference ggplot2 3.5.1](https://ggplot2.tidyverse.org/reference/)
 
 # Linux/Ubuntu/Shell:
-### 1. Storage for self-study
-* Cach tao inline code tren file markdown, vi du:
-```php
-ls $PWD
-```
+### [1. Storage for self-study](https://github.com/Khaingyn/Fun/blob/main/bash%20script/Useful%20bioinformatics%20one-liner.md)
 ### 2. Reference 
 #### Youtube
 * [Shell Tools and Scripting - missing-semester 2020](https://missing.csail.mit.edu/2020/shell-tools/)
