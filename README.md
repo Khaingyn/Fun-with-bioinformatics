@@ -1,6 +1,6 @@
 # Fun
 Luu trữ code, nguồn tài nguyên hay ho, trong quá trình học
-### R script
+# R script
 ## Reference for R
-### Bash script
+# Bash script
 ## Reference for bash
