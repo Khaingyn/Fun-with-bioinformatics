@@ -1,6 +1,19 @@
 # Fun
-Luu trữ code, nguồn tài nguyên hay ho, trong quá trình học
-
+Luu trữ code, nguồn tài nguyên hay ho, trong quá trình học bioinformatics
+# General
+### Wetlab
+- [Beginner's Handbook of Next Generation Sequencing](https://genohub.com/next-generation-sequencing-handbook/) Everything you need to know about starting a sequencing project
+- [Introduction to Experimental Design](https://bioinformaticsworkbook.org/experimentalDesign/exp_design_index#gsc.tab=0)
+### NCBI
+* [Tutorials: BLAST - National Library of Medicine](https://youtube.com/playlist?list=PL7dF9e2qSW0azL2xOKAtxDW7QI8UU4XZ6&si=wAP-OnwlOdmFtx68)
+### Bioinformatics
+- []()
+### Other
+- [06: High-Performance Computing (HPC)](https://datascience.101workbook.org/06-IntroToHPC/00-IntroToHPC-LandingPage#gsc.tab=0)
+- [07: Data Acquisition and Wrangling](https://datascience.101workbook.org/07-DataParsing/00-DataParsing-LandingPage#gsc.tab=0)
+- [08: Data Visualization](https://datascience.101workbook.org/08-DataVisualization/00-DataVisualization-LandingPage#gsc.tab=0)
+- [09: Project Management](https://datascience.101workbook.org/09-ProjectManagement/00-ProjectManagement-LandingPage#gsc.tab=0)
+- [Project Management](https://bioinformaticsworkbook.org/projectManagement/Intro_projectManagement#gsc.tab=0)
 # R language:
 ### [1. Storage for self-study](https://github.com/Khaingyn/Fun/blob/main/R_script/R_script.md)
 ### 2. Reference
@@ -10,8 +23,10 @@ Luu trữ code, nguồn tài nguyên hay ho, trong quá trình học
 * [NGS3-9: Basic R5 - Introduction to ggplot2 package - Advanced VnPathoinformatics](https://www.youtube.com/watch?v=zkLsIb5MIPY&list=PL5T9th5waOqzspZHOxsbD_BQgzBKJlqyf&index=2)
 * [Data Visualization using R video series - BioinfQuests](https://youtube.com/playlist?list=PLAbpA2ThJEBQumaIPYouxuY6Btwx7CJGd&si=BuLGgDYqNrzuxTNH)
 * [Evaluating rarefaction and its alternatives - Riffomonas Project](https://youtube.com/playlist?list=PLmNrK_nkqBpJuhS93PYC-Xr5oqur7IIWf&si=uho3MYsqxjwX8L9L)
-#### Blog/website
-#### Courses website
+#### Blog/Course website
+- [R Programming Environment](https://datascience.101workbook.org/04-DevelopmentEnvironment/03-r-programming-environment.html#gsc.tab=0)
+- [Introduction to R programming](https://datascience.101workbook.org/05-IntroToProgramming/04-R/01-introduction-to-R#gsc.tab=0)
+- [R Markdown from Rstudio](https://rmarkdown.rstudio.com/lesson-1.html)
 #### Ebooks/Documents
 * [ggplot2 (3.5.1): Create Elegant Data Visualisations Using the Grammar of Graphics - Documents](https://cran.r-project.org/web/packages/ggplot2/ggplot2.pdf)
 * [Function reference ggplot2 3.5.1](https://ggplot2.tidyverse.org/reference/)
@@ -39,15 +54,9 @@ Luu trữ code, nguồn tài nguyên hay ho, trong quá trình học
 #### Youtube 
 * [Microbiome data analysis and visualiziation - Riffomonas Project](https://youtube.com/playlist?list=PLmNrK_nkqBpIIRdQTS2aOs5OD7vVMKWAi&si=H5Su4REpun8ZWZzl)
 
-# Bioinformatics:
-#### Youtube
-* [Tutorials: BLAST - National Library of Medicine](https://youtube.com/playlist?list=PL7dF9e2qSW0azL2xOKAtxDW7QI8UU4XZ6&si=wAP-OnwlOdmFtx68)
-#### 
-
 # Math and Machine learning:
 ## Linear algebra
 #### Youtube
-
 #### Courses website
 * [Linear Algebra | 18.06SC | Fall 2011 | Undergraduate - Gilbert Strang | MIT](https://ocw.mit.edu/courses/18-06sc-linear-algebra-fall-2011/)
 * [Infor about "Introduction to Linear Algebra" - Gilbert Strang](https://math.mit.edu/~gs/linearalgebra/)
@@ -62,8 +71,10 @@ Luu trữ code, nguồn tài nguyên hay ho, trong quá trình học
 #### Courses website
 * [Introduction To Probability | RES.6-012 | Spring 2018 | Undergraduate - Prof. John Tsitsiklis, Prof. Patrick Jaillet | MIT](https://ocw.mit.edu/courses/res-6-012-introduction-to-probability-spring-2018/)
 * [Statistics For Applications | 18.650 | Fall 2016 | Undergraduate - Prof. Philippe Rigollet | MIT](https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/)
-
 #### Ebook
 ## Machine Learning
 #### Youtube
 * [Machine Learning - StatQuest with Josh Starmer](https://youtube.com/playlist?list=PLblh5JKOoLUICTaGLRoHQDuF_7q2GfuJF&si=HCI2ZlmlwPoCem1i)
+
+# Other reference resources
+- [getting-started-with-genomics-tools-and-resources](https://github.com/crazyhottommy/getting-started-with-genomics-tools-and-resources)
