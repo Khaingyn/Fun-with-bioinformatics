@@ -4,10 +4,11 @@ Luu trữ code, nguồn tài nguyên hay ho, trong quá trình học bioinformat
 ### Wetlab
 - [Beginner's Handbook of Next Generation Sequencing](https://genohub.com/next-generation-sequencing-handbook/) Everything you need to know about starting a sequencing project
 - [Introduction to Experimental Design](https://bioinformaticsworkbook.org/experimentalDesign/exp_design_index#gsc.tab=0)
+- https://www.bioconductor.org/help/course-materials/2016/CSAMA/lect-09-expdesign/ExperimentalDesign.pdf
 ### NCBI
 * [Tutorials: BLAST - National Library of Medicine](https://youtube.com/playlist?list=PL7dF9e2qSW0azL2xOKAtxDW7QI8UU4XZ6&si=wAP-OnwlOdmFtx68)
 ### Bioinformatics
-- []()
+- https://davetang.org/muse/primer/
 ### Other
 - [06: High-Performance Computing (HPC)](https://datascience.101workbook.org/06-IntroToHPC/00-IntroToHPC-LandingPage#gsc.tab=0)
 - [07: Data Acquisition and Wrangling](https://datascience.101workbook.org/07-DataParsing/00-DataParsing-LandingPage#gsc.tab=0)
@@ -28,8 +29,10 @@ Luu trữ code, nguồn tài nguyên hay ho, trong quá trình học bioinformat
 - [Introduction to R programming](https://datascience.101workbook.org/05-IntroToProgramming/04-R/01-introduction-to-R#gsc.tab=0)
 - [R Markdown from Rstudio](https://rmarkdown.rstudio.com/lesson-1.html)
 #### Ebooks/Documents
+* [R Markdown: The Definitive Guide - by Yihui Xie](https://bookdown.org/yihui/rmarkdown/)
 * [ggplot2 (3.5.1): Create Elegant Data Visualisations Using the Grammar of Graphics - Documents](https://cran.r-project.org/web/packages/ggplot2/ggplot2.pdf)
 * [Function reference ggplot2 3.5.1](https://ggplot2.tidyverse.org/reference/)
+
 
 # Linux/Ubuntu/Shell:
 ### [1. Storage for self-study](https://github.com/Khaingyn/Fun/blob/main/bash%20script/Useful%20bioinformatics%20one-liner.md)
@@ -38,17 +41,21 @@ Luu trữ code, nguồn tài nguyên hay ho, trong quá trình học bioinformat
 * [Shell Tools and Scripting - missing-semester 2020](https://missing.csail.mit.edu/2020/shell-tools/)
 * [Awk, Sed, Grep, Find - BioinfQuests](https://youtube.com/playlist?list=PLAbpA2ThJEBQiitlZge7DcbTNhSkdwxy-&si=Xc8GgLg0f2veNSh3)
 * [Awk Basics - NextGen Learning](https://youtube.com/playlist?list=PLY-V_O-O7h4fzqbPT0kpQMl8XlPvSse9H&si=0vpUvHsBnX1WweFw)
-* [Awk Cheat Sheet](https://bl831.als.lbl.gov/~gmeigs/scripting_help/awk_cheat_sheet.pdf)
-* [AWK GTF! How to Analyze a Transcriptome Like a Pro](https://reasoniamhere.com/2013/09/16/awk-gtf-how-to-analyze-a-transcriptome-like-a-pro-part-1/)
 * [Hướng dẫn sử dụng VIM - Tool gõ code hack não lập trình viên | Vũ Nguyễn Coder](https://youtu.be/Tp8i1EHsQ1Q?si=5PRa8MqwJbY6IWa4)
-* [Markdown syntax - github lucthienphong1120](https://github.com/lucthienphong1120/Markdown-syntax)
-#### Blog/website
+#### Blog/course website
 * [Linux Tutorial - Ryans Tutorials](https://ryanstutorials.net/linuxtutorial/)
-* [Bash Tutorial - Ryans Tutorials](https://ryanstutorials.net/bash-scripting-tutorial/)
 * [ Sử dụng tính năng mở rộng (Expansion) của Bash Shell](https://blogd.net/linux/su-dung-tinh-nang-mo-rong-cua-bash-shell/#3-2-m%E1%BB%9F-r%E1%BB%99ng-t%C3%AAn-%C4%91%C6%B0%E1%BB%9Dng-d%E1%BA%ABn)
 * [Introduction to the Command Line for Genomics](https://datacarpentry.org/shell-genomics/04-redirection.html#using-basename-in-for-loops)
-#### Courses website
-#### Ebook 
+* [Awk Cheat Sheet](https://bl831.als.lbl.gov/~gmeigs/scripting_help/awk_cheat_sheet.pdf)
+* [AWK GTF! How to Analyze a Transcriptome Like a Pro](https://reasoniamhere.com/2013/09/16/awk-gtf-how-to-analyze-a-transcriptome-like-a-pro-part-1/)
+* https://bl831.als.lbl.gov/~gmeigs/scripting_help/better_awk_examples.txt
+* https://github.com/crazyhottommy/bioinformatics-one-liners
+* https://github.com/stephenturner/oneliners
+* https://genomics-array.blogspot.com/2010/11/some-unixperl-oneliners-for.html
+* https://github.com/davetang/learning_bam_file
+* https://bioinformaticsworkbook.org/Appendix/Unix/unix-basics-1.html#gsc.tab=0
+* [Markdown syntax - github lucthienphong1120](https://github.com/lucthienphong1120/Markdown-syntax)
+#### Ebook/Document
 * [Linux Fundamentals - Paul Cobbaut 2015](https://linux-training.be/funhtml/)
 
 
