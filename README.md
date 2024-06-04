@@ -39,6 +39,7 @@ Luu trữ code, nguồn tài nguyên hay ho, trong quá trình học bioinformat
 * [Awk, Sed, Grep, Find - BioinfQuests](https://youtube.com/playlist?list=PLAbpA2ThJEBQiitlZge7DcbTNhSkdwxy-&si=Xc8GgLg0f2veNSh3)
 * [Awk Basics - NextGen Learning](https://youtube.com/playlist?list=PLY-V_O-O7h4fzqbPT0kpQMl8XlPvSse9H&si=0vpUvHsBnX1WweFw)
 * [Awk Cheat Sheet](https://bl831.als.lbl.gov/~gmeigs/scripting_help/awk_cheat_sheet.pdf)
+* [AWK GTF! How to Analyze a Transcriptome Like a Pro](https://reasoniamhere.com/2013/09/16/awk-gtf-how-to-analyze-a-transcriptome-like-a-pro-part-1/)
 * [Hướng dẫn sử dụng VIM - Tool gõ code hack não lập trình viên | Vũ Nguyễn Coder](https://youtu.be/Tp8i1EHsQ1Q?si=5PRa8MqwJbY6IWa4)
 * [Markdown syntax - github lucthienphong1120](https://github.com/lucthienphong1120/Markdown-syntax)
 #### Blog/website
