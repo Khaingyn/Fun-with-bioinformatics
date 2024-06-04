@@ -38,6 +38,7 @@ Luu trữ code, nguồn tài nguyên hay ho, trong quá trình học bioinformat
 * [Shell Tools and Scripting - missing-semester 2020](https://missing.csail.mit.edu/2020/shell-tools/)
 * [Awk, Sed, Grep, Find - BioinfQuests](https://youtube.com/playlist?list=PLAbpA2ThJEBQiitlZge7DcbTNhSkdwxy-&si=Xc8GgLg0f2veNSh3)
 * [Awk Basics - NextGen Learning](https://youtube.com/playlist?list=PLY-V_O-O7h4fzqbPT0kpQMl8XlPvSse9H&si=0vpUvHsBnX1WweFw)
+* [Awk Cheat Sheet](https://bl831.als.lbl.gov/~gmeigs/scripting_help/awk_cheat_sheet.pdf)
 * [Hướng dẫn sử dụng VIM - Tool gõ code hack não lập trình viên | Vũ Nguyễn Coder](https://youtu.be/Tp8i1EHsQ1Q?si=5PRa8MqwJbY6IWa4)
 * [Markdown syntax - github lucthienphong1120](https://github.com/lucthienphong1120/Markdown-syntax)
 #### Blog/website
