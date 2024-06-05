@@ -7,8 +7,8 @@
 awk ' BEGIN { RS=">"; ORS=">"; FS="\n" } { if(($2!~/N/)==1) print $0}' file_input
 # hoặc là
 awk ' BEGIN { RS=">"; ORS=">"; FS="\n" } { if(($2~/N/)==0) print $0}' file_input
-
 ```
+
 ```php
 
 ```
