@@ -49,7 +49,7 @@ conda activate downdata
 conda install -c bioconda sra-tools=3.1.1
 ```
 - Sử dụng kết hợp esearch và efetch từ entrez-direct, prefetch từ sra-tools để tải toàn bộ file sra từ id PRJNA607213, lưu tất cả file sra trong một thư mục có tên "sra-file":
-  - Nếu muốn tải từ id khác, chỉ cần thay thế id trong dòng lệnh - trong cặp dấu ngoặc kép.
+  - Nếu muốn tải từ id khác, chỉ cần thay thế id trong dòng lệnh (trong cặp dấu ngoặc kép).
   - Nếu muốn lưu tất cả file sra vào 1 thư mục có tên khác, thay thế tên đó vào những chỗ có "sra-file" trong dòng lệnh, có 4 chỗ.
 ```php
 !esearch -db sra -query "PRJNA607213" | efetch -format runinfo | awk -F ',' 'NR>1 {print $1}' | xargs -I {} sh -c 'prefetch {} -O sra-file/ && mv sra-file/{}/*.sra sra-file/ && rm -rf sra-file/{}'
