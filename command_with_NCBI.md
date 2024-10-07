@@ -36,7 +36,7 @@ Sequence Read Archive (SRA) của NCBI, và các file fastq này sẽ được l
 
 ## 1. Tải file sra
 ### 1.1. Tải tất cả file sra từ 1 id BioProject
-- Cài đặt entrez-direct trong 1 môi trường conda (cách cài conda: https://docs.anaconda.com/miniconda/) có tên downdata (có thể đổi tên khác), cài version mới nhất 22.4 (thời điểm viết bài):
+- Cài đặt entrez-direct trong 1 môi trường conda (cách cài conda: https://docs.anaconda.com/miniconda/) có tên downdata (có thể đổi tên khác bằng cách thay "downdata" trong dòng lệnh bằng tên đó), cài version mới nhất 22.4 (thời điểm viết bài):
 ```php
 conda create -n downdata -c bioconda entrez-direct=22.4
 ```
