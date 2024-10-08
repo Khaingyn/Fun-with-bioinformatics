@@ -54,4 +54,6 @@ conda install -c bioconda sra-tools=3.1.1
 ```php
 !esearch -db sra -query "PRJNA607213" | efetch -format runinfo | awk -F ',' 'NR>1 {print $1}' | xargs -I {} sh -c 'prefetch {} -O sra-file/ && mv sra-file/{}/*.sra sra-file/ && rm -rf sra-file/{}'
 ```
-    
+# Tải file metadata của 1 BioProject
+
+https://www.ncbi.xyz/Traces/study/?acc=PRJNA607213&o=acc_s%3Aa
