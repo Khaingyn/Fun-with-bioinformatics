@@ -5,6 +5,7 @@ Quản lý quý trình phân tích tin sinh học, và Khả năng tái tạo l�
 - **nextflow**: https://www.nextflow.io/
   - Tham khảo thêm:
     - https://training.nextflow.io/latest/basic_training/intro/
+    - Nhiều pipeline tin sinh học sử dụng nextflow được phát triển sẵn - nfcore: https://nf-co.re/
 
 - **WDL**: https://docs.openwdl.org/overview.html
 - **cromwell**: https://github.com/broadinstitute/cromwell?tab=readme-ov-file
@@ -15,12 +16,13 @@ Quản lý quý trình phân tích tin sinh học, và Khả năng tái tạo l�
 ## Tool gộp các script thành 1 file dễ theo dõi, cũng có thể chạy cho tự động từ đầu đến cuối - nhưng không chuyên bằng các tool trong mục trên (như nextflow), nhưng mục đích chính là dễ xem và theo dõi từng bước trong quy trình nếu không muốn chạy hết từ đầu tới cuối, mang tính bán thủ công hơn, ngoài ra có quarto hỗ trợ tạo report html
 - **Quarto**: https://quarto.org/docs/websites/index.html#workflow
   - Phát triển chú yếu cho ngôn ngữ R, có thể chứa các ngôn ngữ khác, được phát triển để thay thế Rmarkdown (https://rmarkdown.rstudio.com/) - đuôi file .rmd ()
-  - File đuôi  .qmd, có cấu trúc markdown + code block (ô chứa code, trong .qmd gọi là code chunk) giống file .ipynb (chủ yếu) cho python
+  - File đuôi  .qmd, có cấu trúc markdown + code block (ô chứa code, trong .qmd gọi là code chunk) giống file .ipynb (chủ yếu) cho python.
+    - Cú pháp markdown: https://www.markdownguide.org/basic-syntax/
   - Thường được dùng để tạo report html cho kết quả phân tích. Có thể cùng lúc dùng vẽ plot, tính xstk và xuất hình ảnh cho bài báo, sldie (Vì .qmd chứa code R).
-  - Có thể tạo cả website html để host bằng github (ví dụ tạo website html cho Docs, tutorial, và đăng lên github - link web có địa chỉ từ github)
-  - **Mermaid**: cú pháp vẽ quy trình diagram trong markdown, bổ trợ cho report html (https://mermaid.js.org/intro/)
-- Bổ trợ cho html report của quarto: **Multiqc**: https://docs.seqera.io/multiqc/custom_content
-  - Tool tổng hợp các html (ví dụ các html fastQC) thành 1 html. Docs cho cấu hình lại file html đầu ra, cho phù hợp tích hợp vào report html từ Quarto
+  - Có thể tạo cả website html để host bằng github (ví dụ tạo website html cho Docs, tutorial, và đăng lên github - link web có địa chỉ từ github).
+  - **Mermaid**: cú pháp vẽ quy trình diagram trong markdown, bổ trợ cho report html (https://mermaid.js.org/intro/).
+  - **Multiqc**: https://docs.seqera.io/multiqc/custom_content
+    - Tool tổng hợp các html (ví dụ các html fastQC) thành 1 html. Docs cho cấu hình lại file html đầu ra, cho phù hợp tích hợp vào report html từ Quarto.
 - **Jupyter notebook**: https://jupyter.org/
   - Công cụ web, cài về máy local.
   - Sử dụng file đuôi .ipynb (interact python notebook), có cấu trúc markdown + code block, phát triển chủ yếu cho python. File này cũng có thể được mở Google Colab (https://colab.google/), là 1 could tính toán của google, dùng tài khoản gmail để sử dụng.
