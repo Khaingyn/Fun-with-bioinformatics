@@ -61,3 +61,6 @@ Tạo môi trường cho riêng quy trình phân tích tin sinh, để có thể
   - More ref:
     - fd
 
+## Version control and storage cloud
+- **git**: https://git-scm.com/docs
+  - More ref: https://learngitbranching.js.org/
