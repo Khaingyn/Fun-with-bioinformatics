@@ -18,6 +18,7 @@ Quản lý quý trình phân tích tin sinh học, và Khả năng tái tạo l�
   - File đuôi  .qmd, có cấu trúc markdown + code block (ô chứa code, trong .qmd gọi là code chunk) giống file .ipynb (chủ yếu) cho python
   - Thường được dùng để tạo report html cho kết quả phân tích. Có thể cùng lúc dùng vẽ plot, tính xstk và xuất hình ảnh cho bài báo, sldie (Vì .qmd chứa code R).
   - Có thể tạo cả website html để host bằng github (ví dụ tạo website html cho Docs, tutorial, và đăng lên github - link web có địa chỉ từ github)
+  - **Mermaid**: cú pháp vẽ quy trình diagram trong markdown, bổ trợ cho report html (https://mermaid.js.org/intro/)
 - Bổ trợ cho html report của quarto: **Multiqc**: https://docs.seqera.io/multiqc/custom_content
   - Tool tổng hợp các html (ví dụ các html fastQC) thành 1 html. Docs cho cấu hình lại file html đầu ra, cho phù hợp tích hợp vào report html từ Quarto
 - **Jupyter notebook**: https://jupyter.org/
