@@ -4,7 +4,7 @@ Quản lý quý trình phân tích tin sinh học, và Khả năng tái tạo l�
 ## Ngôn ngữ cho gộp các tool để chạy tự động thành 1 pipeline
 - **nextflow**: https://www.nextflow.io/
   - Tham khảo thêm:
-    - fdf
+    - https://training.nextflow.io/latest/basic_training/intro/
 
 - **WDL**: https://docs.openwdl.org/overview.html
 - **cromwell**: https://github.com/broadinstitute/cromwell?tab=readme-ov-file
