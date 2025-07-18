@@ -4,6 +4,7 @@ Quản lý quý trình phân tích tin sinh học, và Khả năng tái tạo l�
 ## Ngôn ngữ cho gộp các tool để chạy tự động thành 1 pipeline
 - **nextflow**: https://www.nextflow.io/
   - Tham khảo thêm:
+    - https://nextflow.io/docs/latest/install.html
     - https://training.nextflow.io/latest/basic_training/intro/
     - Nhiều pipeline tin sinh học sử dụng nextflow được phát triển sẵn - nfcore: https://nf-co.re/
 
