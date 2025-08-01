@@ -5,3 +5,9 @@
   - nhìn phát hiểu ngay - một cách đơn giản nhất (cũng phải phù hợp cho từng trường hợp)
 
 về những thông tin có được từ dữ liệu đầu vào mà ta phân tích và khám phá ra được. Đó chính là mục tiêu của hành động "trực quan hoá dữ liệu" 
+
+## IDE for R
+- Rstudio
+- Positron:
+  - https://positron.posit.co/quarto.html
+  - https://quarto.org/docs/get-started/hello/positron.html
