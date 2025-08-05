@@ -11,3 +11,9 @@ về những thông tin có được từ dữ liệu đầu vào mà ta phân t
 - Positron:
   - https://positron.posit.co/quarto.html
   - https://quarto.org/docs/get-started/hello/positron.html
+
+## Book
+- Fundamentals of Data Visualization, Claus O. Wilke (https://clauswilke.com/dataviz/)
+- R for Data Science (2e) (https://r4ds.hadley.nz/workflow-scripts.html)
+- R Graphics Cookbook, 2nd edition, Winston Chang (https://r-graphics.org/)
+- ggplot2: Elegant Graphics for Data Analysis (3e) (https://ggplot2-book.org/)
