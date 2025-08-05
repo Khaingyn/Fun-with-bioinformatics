@@ -17,3 +17,4 @@ về những thông tin có được từ dữ liệu đầu vào mà ta phân t
 - R for Data Science (2e) (https://r4ds.hadley.nz/workflow-scripts.html)
 - R Graphics Cookbook, 2nd edition, Winston Chang (https://r-graphics.org/)
 - ggplot2: Elegant Graphics for Data Analysis (3e) (https://ggplot2-book.org/)
+- Introduction to Data Science |part 1| Data Wrangling and Visualization with R (https://rafalab.dfci.harvard.edu/dsbook-part-1/)
