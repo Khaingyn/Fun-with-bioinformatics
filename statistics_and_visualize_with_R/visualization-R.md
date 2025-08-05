@@ -18,3 +18,11 @@ về những thông tin có được từ dữ liệu đầu vào mà ta phân t
 - R Graphics Cookbook, 2nd edition, Winston Chang (https://r-graphics.org/)
 - ggplot2: Elegant Graphics for Data Analysis (3e) (https://ggplot2-book.org/)
 - Introduction to Data Science |part 1| Data Wrangling and Visualization with R (https://rafalab.dfci.harvard.edu/dsbook-part-1/)
+
+## Video
+-  Webinar: Plotting Anything with ggplot2 by Thomas Lin Pedersen
+  - Part 1: https://www.youtube.com/watch?v=h29g21z0a68
+  - Part 2: https://www.youtube.com/watch?v=0m4yywqNPVY
+
+## Source
+- ggplot2 extensions - gallery (https://exts.ggplot2.tidyverse.org/gallery/)
