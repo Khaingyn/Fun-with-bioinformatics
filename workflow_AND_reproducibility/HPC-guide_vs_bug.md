@@ -2,12 +2,13 @@
 
 ## Quy trình sử dụng HPC (lần đầu)
 
-**1. Tạo key**
+**Bước 1. Tạo key**
 
-**2. Truy cập vào HPC (server) từ máy tính cá nhân (local) bằng công cụ ssh**
+**Bước 2. Truy cập vào HPC (server) từ máy tính cá nhân (local) bằng công cụ ssh**
 
-**3. Submit job bằng công cụ slurm**
+**Bước 3. Submit job bằng công cụ slurm**
 
+**->** Từ lần thứ 2 trở đi thì chỉ cần bắt đầu từ bước 2, không cần phải tạo key nữa.
 
 ## Lỗi từng gặp trong quá trình sử dụng
 
