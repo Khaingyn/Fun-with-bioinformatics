@@ -10,6 +10,13 @@
 
 **->** Từ lần thứ 2 trở đi thì chỉ cần bắt đầu từ bước 2, không cần phải tạo key nữa.
 
+## Chuyển dữ liệu giữa HPC, local và cloud với nhau
+**1. Chuyển dữ liệu từ HPC sang local**
+  - Chạy lệnh scp trong terminal của local:
+    ```
+    scp -r username@server_address:/path/to/data_hpc /path/to/folder_local
+    ```
+    Trong đó, /path/to/data_hpc là đường dẫn tuyệt đối của thư mục hoặc file trên máy hpc mà bạn đang muốn chuyển sang local, /path/to/folder_local là đường dẫn tuyệt đối (hoặc đường dẫn tương đối) của thư mục trên local mà bạn đang muốn lưu.
 ## Lỗi từng gặp trong quá trình sử dụng
 
 **sign_and_send_pubkey: signing failed for RSA ".ssh/id_rsa" from agent: agent refused operation
