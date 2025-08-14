@@ -22,3 +22,8 @@ username@server_address: Permission denied (publickey).**
     ```
     ssh -i ~/.ssh/id_sra username@server_address
     ```
+    Cách này cũng có thể áp dụng cho trường hợp: git clone một private repo của một tài khoản github A về máy local - bằng tài khoản github B mà đã được tài khoản github A mới vào đóng góp, bằng "địa chỉ ssh cho clone private repo về máy local":
+    ```
+    git clone git@github.com:user_name/repo_name.git
+    ```
+     nhưng không clone được. Sau khi phân quyền lại file id_sra thì đã clone lại được. 
