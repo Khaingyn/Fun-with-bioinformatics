@@ -48,6 +48,7 @@ Quản lý quý trình phân tích tin sinh học, và Khả năng tái tạo l�
 Tạo môi trường cho riêng quy trình phân tích tin sinh, để có thể mang quy trình phân tích này thực hiện ở bất cứ máy tính cá nhân, hay hệ thống máy tính lớn nào mà vẫn cho ra kết quả tương tự nhau.
 - **Docker**: https://www.docker.com/
   - Ưu tiên sử dụng trên máy của cá nhân, hạn chế sử dụng trong hệ thống máy tính dùng chung mà người đó chỉ là user không phải admin, vì docker yêu cầu quyền sodu nhiều.
+  - Docs, guide: https://docs.docker.com/get-started/introduction/
 - **SingularityCE** (bởi sylabs):
   - User docs: https://docs.sylabs.io/guides/latest/user-guide/introduction.html
   - admin docs: https://docs.sylabs.io/guides/4.2/admin-guide/
