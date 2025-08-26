@@ -1,7 +1,25 @@
 # Docker
 
 ## Thao tác với Docker image
-  
+
+- Liệt kê các image:
+  ```
+  docker images
+  ```
+- Xoá 1 image:
+  ```
+  docker rmi <image_id_or_name>
+  ```
+  Nếu bị báo lỗi "image is being used by container" thì phải xoá container trước:
+  ```
+  docker rm <container_id>
+  docker rmi <image_id>
+  ```
+  --> Vì Docker không cho phép xoá image vì hiện đang có ít nhất một container (đang chạy hoặc đã dừng) được tạo từ image đó.
+- Xoá 1 image cưỡng bức (chỉ dùng khi bạn không còn quan tâm các container đang chạy hay đã dừng mà được khởi tạo từ image đang muốn xoá):
+  ```
+  docker rmi -f <image_id>
+  ```
 ## Thao tác với Docker container:
 vào docker:
 ```
