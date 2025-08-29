@@ -1,5 +1,9 @@
 # Docker
 
+## Nguyên lý khi build Docker container từ Docker image
+
+- Khi chạy lệnh ```docker build```, Docker daemon sẽ copy toàn bộ nội dung trong thư mục được dẫn tới (mà chứa file **Dockerfile**) trong dòng lệnh vào một cái không gian riêng cho công cụ Docker - gọi là **build context**, sau đó daemon nó mới copy những thứ trong **build context** vào trong image khi build (nếu những thứ đó được yêu cầu copy trong **Dockerfile**). Như vậy nếu những file, folder được yêu cầu copy vào image mà được ghi trong file **.dockerignore**, thì khi build Docker image sẽ bị lỗi. Daemon sẽ copy nội dung trong **build context** vào image (theo yêu cầu trong **Dockerfile**, chứ nó không truy cập vào ổ cứng của máy tính được để mà copy thẳng từ ổ cứng vào image, đây là copy gián tiếp.
+
 ## Thao tác với Docker image
 
 - Liệt kê các image:
