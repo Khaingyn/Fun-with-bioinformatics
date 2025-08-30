@@ -37,7 +37,12 @@ Dockerfile và .dockerignore luôn luôn được gửi vào build context cho d
   - repo: tên của repo chứa Docker image đó.
   - tag: như là 1 chú thích gì đó tuỳ bạn, nếu không đặt ':tag' thì docker tự gán tag là 'latest' (dùng lệnh ```docker images``` để liệt kê các image đã tạo trong local, xem cột "TAG" sẽ thấy).
   - path/to/Dockerfile: là đường dẫn tới thư mục chứa file **Dockerfile** (không nhất thiết dẫn tới tên file của **Dockerfile** trừ khi bạn đặt tên khác, chỉ cần dẫn tới thư mục chứa **Dockerfile**, Docker daemon sẽ tự quét tìm **Dockerfile**.
-
+    
+- Xem các thành phần và size của nó của 1 image:
+  ```
+  docker history user_name/repo:tag
+  ```
+  
 ## Thao tác với Docker container:
 vào docker:
 ```
