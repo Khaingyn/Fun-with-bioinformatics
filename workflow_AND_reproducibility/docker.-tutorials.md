@@ -102,7 +102,7 @@ docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
 
 - B2. Cấu hình cho tokens trước khi tạo.
     <img width="902" height="554" alt="image" src="https://github.com/user-attachments/assets/4ebe720f-680e-46ab-8a6d-3d9443b42e72" />
-  - **Description:** Mô tả cho mục đích sử dụng tokens
+  - **Access token description:** Mô tả cho mục đích sử dụng tokens
   - **Expiration date:** Thời gian sử dụng cho tokens. Chẳng hạn chọn hạn là 30 ngày. Nghĩa là sau 30 ngày, không thể dùng tokens này để đăng nhập được nữa.
     <img width="729" height="450" alt="image" src="https://github.com/user-attachments/assets/9b759cd1-3665-4bd7-91ff-d97e2bc5c47e" />
   - **Access permission:** Thiết lập quyền cho tokens.
@@ -110,7 +110,10 @@ docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
 
     - Public Repo Read-only tokens cho phép bạn view, search, và pull images từ bất kỳ public repositories nào.
     - Read-only tokens cho phép bạn view, search, và pull images từ bất kỳ public repositories và bất kỳ private repositories nào mà bạn có quyền truy cập.
-    - Read & Write tokens cho phép bạn push images đến bất kỳ repository nào được quản lý bởi tài khoản của bạn.
-    - Read, Write, Delete tokens cho phép bạn quản lý repositories.
-
+    - Read & Write tokens cho phép bạn pull và push images đến bất kỳ repository nào được quản lý bởi tài khoản của bạn.
+    - Read, Write, Delete tokens cho phép bạn quản lý repositories của bạn.
+  - Sau đó chọn "Generate" để tiến hành tạo token. Lưu ý: mã token sẽ chỉ hiện ở màn hình đó 1 lần duy nhất, nên cần copy lại. Sau khi bạn thoát ra sẽ không thể vào lại để lấy mã token. Trên màn hình đó sẽ có hướng dẫn đăng nhập dùng token bằng CLI.
+     - Chạy lệnh:
+       ```docker login -u user_name```
+       Sau đó trên terminal sẽ hiện "Password:", bạn dán token vào và enter.
 
