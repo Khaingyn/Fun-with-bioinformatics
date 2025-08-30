@@ -91,9 +91,26 @@ docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
 Để đưa 1 Docker image (đã tạo trong local) lên Docker Hub, cần đăng nhập tài khoản trước (nếu bạn đã tạo rồi). 
 - Chưa bật 2FA → bạn có 2 lựa chọn: dùng password hoặc token để login.
 - Đã bật 2FA → bắt buộc phải dùng token, vì password thường sẽ bị từ chối.
-  
-**Cách đăng nhập bằng Docker CLI:**
-- Đăng nhập dùng tokens:
-  B1. Chọn "Generate new tokens"
+  <img width="712" height="380" alt="image" src="https://github.com/user-attachments/assets/de1535f1-2d90-46d8-8e13-895a2804ccb6" />
+
+## Đăng nhập Docker Hub bằng commandline:
+
+**Đăng nhập dùng tokens:**
+
+- B1. Đăng nhập tài khoản ở website 'app.docker.com', vào cài đặt account --> Personal access tokens -> chọn "Generate new tokens".
   <img width="1482" height="784" alt="image" src="https://github.com/user-attachments/assets/9553739d-0601-48be-8636-97036c524211" />
+
+- B2. Cấu hình cho tokens trước khi tạo.
+    <img width="902" height="554" alt="image" src="https://github.com/user-attachments/assets/4ebe720f-680e-46ab-8a6d-3d9443b42e72" />
+  - **Description:** Mô tả cho mục đích sử dụng tokens
+  - **Expiration date:** Thời gian sử dụng cho tokens. Chẳng hạn chọn hạn là 30 ngày. Nghĩa là sau 30 ngày, không thể dùng tokens này để đăng nhập được nữa.
+    <img width="729" height="450" alt="image" src="https://github.com/user-attachments/assets/9b759cd1-3665-4bd7-91ff-d97e2bc5c47e" />
+  - **Access permission:** Thiết lập quyền cho tokens.
+    <img width="651" height="492" alt="image" src="https://github.com/user-attachments/assets/6de899d5-aa3c-4b14-891f-0727586d2a80" />
+
+    - Public Repo Read-only tokens cho phép bạn view, search, và pull images từ bất kỳ public repositories nào.
+    - Read-only tokens cho phép bạn view, search, và pull images từ bất kỳ public repositories và bất kỳ private repositories nào mà bạn có quyền truy cập.
+    - Read & Write tokens cho phép bạn push images đến bất kỳ repository nào được quản lý bởi tài khoản của bạn.
+    - Read, Write, Delete tokens cho phép bạn quản lý repositories.
+
 
