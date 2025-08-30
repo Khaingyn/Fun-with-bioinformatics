@@ -154,12 +154,25 @@ docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
       quan trọng là dòng cuối ```Login Succeeded```
 ## Đưa Docker image trong local lên Docker Hub
 
-- **B1.** Đổi tên image muốn đưa lên, sao cho trùng với username của Docker Hub
-  Trên Docker Hub, image phải có dạng:
+- **B1.** Cần gán thêm nhãn tên cho image, và nhãn tên mới này trùng với username của Docker Hub. 1 image trên local có thể có nhiều nhãn tên, và khi tạo thêm nhãn tên cho image đó, nó sẽ không copy image ra thêm, chỉ là gán thêm nhãn tên. Và bạn sẽ đẩy image này với nhãn tên mới được thêm mà phù hợp với Docker Hub.
+  Trên Docker Hub, nhãn tên image phải có dạng:
   ```{php}
   <username>/<repository>:<tag>
   ```
   - ```<username>``` = username Docker Hub của bạn (ví dụ: khaingyn)
   - ```<repository>``` = tên repo bạn muốn đặt trên Docker Hub (nếu chưa có sẽ tự tạo khi push)
   - ```<tag>``` = tùy chọn (mặc định là latest)
+  - Ví dụ gán thêm nhãn tên mới ```khainguyn/nf-pgta``` cho ```thanhntt2003hcm/nf-pgta:bwa```:
+   ```
+   docker tag thanhntt2003hcm/nf-pgta:bwa khainguyn/nf-pgta
+   ```
+  - Dùng ```docker images``` kiểm tra lại, output:
+    ```
+    REPOSITORY                TAG       IMAGE ID       CREATED       SIZE
+    khainguyn/nf-pgta         latest    649331b3a8f5   8 hours ago   48.3GB
+    thanhntt2003hcm/nf-pgta   bwa       649331b3a8f5   8 hours ago   48.3GB
+    thanhntt2003hcm/nf-pgta   latest    b3f466b0bda5   2 weeks ago   33.2GB
+    ```
+    bạn có thể thấy ở cột SIZE là có 2 cái 48.3GB, như tôi đã nói phía trên. Chỉ là 2 cái nhãn tên của 1 image thôi, nên trong storage hiện tại chỉ dùng 48.3GB cho image đó, chứ không phải 48.3GB x2.
+    <img width="722" height="118" alt="image" src="https://github.com/user-attachments/assets/bd274436-1887-4143-b16f-0e6ce33b6cc6" />
 
