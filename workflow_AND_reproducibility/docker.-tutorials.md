@@ -97,10 +97,10 @@ docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
 
 **Đăng nhập dùng tokens:**
 
-- B1. Đăng nhập tài khoản ở website 'app.docker.com', vào cài đặt account --> Personal access tokens -> chọn "Generate new tokens".
+- **B1.** Đăng nhập tài khoản ở website 'app.docker.com', vào cài đặt account --> Personal access tokens -> chọn "Generate new tokens".
   <img width="1482" height="784" alt="image" src="https://github.com/user-attachments/assets/9553739d-0601-48be-8636-97036c524211" />
 
-- B2. Cấu hình cho tokens trước khi tạo.
+- **B2.** Cấu hình cho tokens trước khi tạo.
     <img width="902" height="554" alt="image" src="https://github.com/user-attachments/assets/4ebe720f-680e-46ab-8a6d-3d9443b42e72" />
   - **Access token description:** Mô tả cho mục đích sử dụng tokens
   - **Expiration date:** Thời gian sử dụng cho tokens. Chẳng hạn chọn hạn là 30 ngày. Nghĩa là sau 30 ngày, không thể dùng tokens này để đăng nhập được nữa.
@@ -108,14 +108,14 @@ docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
   - **Access permission:** Thiết lập quyền cho tokens.
     <img width="651" height="492" alt="image" src="https://github.com/user-attachments/assets/6de899d5-aa3c-4b14-891f-0727586d2a80" />
 
-    - Public Repo Read-only tokens cho phép bạn view, search, và pull images từ bất kỳ public repositories nào.
-    - Read-only tokens cho phép bạn view, search, và pull images từ bất kỳ public repositories và bất kỳ private repositories nào mà bạn có quyền truy cập.
-    - Read & Write tokens cho phép bạn pull và push images đến bất kỳ repository nào được quản lý bởi tài khoản của bạn.
-    - Read, Write, Delete tokens cho phép bạn quản lý repositories của bạn.
+    - **Public Repo Read-only**: cho phép bạn view, search, và pull images từ bất kỳ public repositories nào.
+    - **Read-only**: cho phép bạn view, search, và pull images từ bất kỳ public repositories và bất kỳ private repositories nào mà bạn có quyền truy cập.
+    - **Read & Write**: cho phép bạn pull và push images đến bất kỳ repository nào được quản lý bởi tài khoản của bạn.
+    - **Read, Write, Delete**: cho phép bạn quản lý repositories của bạn.
 
-- B3. Sau đó chọn "Generate" để tiến hành tạo token. Lưu ý: mã token sẽ chỉ hiện ở màn hình đó 1 lần duy nhất, nên cần copy lại. Sau khi bạn thoát ra sẽ không thể vào lại để lấy mã token. Trên màn hình đó sẽ có hướng dẫn đăng nhập dùng token bằng CLI. Tuy nhiên hãy dùng lệnh ở bước 4 cho nhanh.
+- **B3.** Sau đó chọn "Generate" để tiến hành tạo token. Lưu ý: mã token sẽ chỉ hiện ở màn hình đó 1 lần duy nhất, nên cần copy lại. Sau khi bạn thoát ra sẽ không thể vào lại để lấy mã token. Trên màn hình đó sẽ có hướng dẫn đăng nhập dùng token bằng CLI. Tuy nhiên hãy dùng lệnh ở bước 4 cho nhanh.
 
-- B4. Trong terminal local. Chạy lệnh:
+- **B4.** Trong terminal local. Chạy lệnh:
        ```echo "YOUR_TOKEN" | docker login -u user_name --password-stdin```  
  Sau đó trên terminal sẽ hiện "Password:", bạn dán token vào và enter.
   - Nếu như trên màn hình xuất hiện lỗi không đăng nhập được:
