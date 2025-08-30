@@ -122,7 +122,9 @@ docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
   ```
   echo "YOUR_TOKEN" | docker login -u user_name --password-stdin
   ```  
- Sau đó trên terminal sẽ hiện "Password:", bạn dán token vào và enter.
+  Trong đó:
+  **YOUR_TOKEN**: là chuỗi token.
+  **user_name**: là user name của Docker Hub.
   - Nếu như trên màn hình xuất hiện lỗi không đăng nhập được:
     ```
     Error saving credentials: error storing credentials - err: exit status 1, out: `pass not initialized: exit status 1: Error: password store is empty. Try "pass init".`
