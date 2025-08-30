@@ -116,7 +116,9 @@ docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
 - **B3.** Sau đó chọn "Generate" để tiến hành tạo token. Lưu ý: mã token sẽ chỉ hiện ở màn hình đó 1 lần duy nhất, nên cần copy lại. Sau khi bạn thoát ra sẽ không thể vào lại để lấy mã token. Trên màn hình đó sẽ có hướng dẫn đăng nhập dùng token bằng CLI. Tuy nhiên hãy dùng lệnh ở bước 4 cho nhanh.
 
 - **B4.** Trong terminal local. Chạy lệnh:
-       ```echo "YOUR_TOKEN" | docker login -u user_name --password-stdin```  
+  ```
+  echo "YOUR_TOKEN" | docker login -u user_name --password-stdin
+  ```  
  Sau đó trên terminal sẽ hiện "Password:", bạn dán token vào và enter.
   - Nếu như trên màn hình xuất hiện lỗi không đăng nhập được:
     ```
@@ -135,7 +137,9 @@ docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
     }
     ```
     - Dùng nano để vào xoá dòng ```"credsStore": "desktop",``` :
-      ```nano ~/.docker/config.json```
+      ```
+      nano ~/.docker/config.json
+      ```
     - Sau đó: ctrl+X --> Y --> Enter để lưu kết quả sửa. Bạn đăng nhập lại, nếu thành công sẽ có output:
       ```
       WARNING! Your credentials are stored unencrypted in '/home/home_user/.docker/config.json'.
