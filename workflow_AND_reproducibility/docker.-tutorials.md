@@ -136,11 +136,11 @@ docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
         "currentContext": "desktop-linux"
     }
     ```
-    - Dùng nano để vào xoá dòng ```"credsStore": "desktop",``` :
+    - Mở file bằng nano:
       ```
       nano ~/.docker/config.json
       ```
-    - Sau đó: ctrl+X --> Y --> Enter để lưu kết quả sửa. Bạn đăng nhập lại, nếu thành công sẽ có output:
+    - Hãy tiến hành xoá dòng ```"credsStore": "desktop",``` . Sau đó: ctrl+X --> Y --> Enter để lưu kết quả sửa. Bạn đăng nhập lại, nếu thành công sẽ có output:
       ```
       WARNING! Your credentials are stored unencrypted in '/home/home_user/.docker/config.json'.
       Configure a credential helper to remove this warning. See
@@ -148,6 +148,6 @@ docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
 
       Login Succeeded
       ```
-
+      quan trọng là dòng cuối ```Login Succeeded```
 
 
