@@ -188,3 +188,4 @@ docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
   ```
   docker push khainguyn/nf-pgta
   ```
+  Quá trình diễn ra xong nhanh hay lâu sẽ tuỳ thuộc vào tốc độ internet.
