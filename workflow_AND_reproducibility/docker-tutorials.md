@@ -154,7 +154,7 @@ docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
       quan trọng là dòng cuối ```Login Succeeded```
 ## Đưa Docker image trong local lên Docker Hub
 
-- **B1.** Cần gán thêm nhãn tên cho image, và nhãn tên mới này trùng với username của Docker Hub. 1 image trên local có thể có nhiều nhãn tên, và khi tạo thêm nhãn tên cho image đó, nó sẽ không copy image ra thêm, chỉ là gán thêm nhãn tên. Và bạn sẽ đẩy image này với nhãn tên mới được thêm mà phù hợp với Docker Hub.
+- **B1.** Cần gán thêm nhãn tên cho image, và nhãn tên mới này trùng với username của Docker Hub (nếu nhãn tên hiện có đã trùng thì bỏ qua bước 1). 1 image trên local có thể có nhiều nhãn tên, và khi tạo thêm nhãn tên cho image đó, nó sẽ không copy image ra thêm, chỉ là gán thêm nhãn tên. Và bạn sẽ đẩy image này với nhãn tên mới được thêm mà phù hợp với Docker Hub.
   Trên Docker Hub, nhãn tên image phải có dạng:
   ```{php}
   <username>/<repository>:<tag>
@@ -176,3 +176,12 @@ docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
     bạn có thể thấy ở cột SIZE là có 2 cái 48.3GB, như tôi đã nói phía trên. Chỉ là 2 cái nhãn tên của 1 image thôi, nên trong storage hiện tại chỉ dùng 48.3GB cho image đó, chứ không phải 48.3GB x2.
     <img width="722" height="118" alt="image" src="https://github.com/user-attachments/assets/bd274436-1887-4143-b16f-0e6ce33b6cc6" />
 
+  - Nếu như bạn không muốn dùng nhãn cũ nữa thì có thể xoá:
+    ```
+    docker rmi thanhntt2003hcm/nf-pgta
+    ```
+    Chỉ cần image đó còn ít nhất 1 nhãn tên sau khi xoá, thì image sẽ còn trong local. Nếu như image đó chỉ có duy nhất 1 nhãn tên, thì khi dùng lệnh ```docker rmi``` thì sẽ xoá luôn cả nhãn đó và image đó.
+- **B2.** Tiến hành đưa image lên Docker Hub. Dùng lệnh:
+  ```
+  docker push khainguyn/nf-pgta
+  ```
