@@ -180,7 +180,7 @@ docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
     ```
     docker rmi thanhntt2003hcm/nf-pgta
     ```
-    Chỉ cần image đó còn ít nhất 1 nhãn tên sau khi xoá, thì image sẽ còn trong local. Nếu như image đó chỉ có duy nhất 1 nhãn tên, thì khi dùng lệnh ```docker rmi``` thì sẽ xoá luôn cả nhãn đó và image đó.
+    Chỉ cần image đó còn ít nhất 1 nhãn tên sau khi xoá, thì image sẽ còn trong local. Nếu như image đó chỉ có duy nhất 1 nhãn tên, thì khi dùng lệnh ```docker rmi``` thì sẽ xoá luôn cả nhãn đó và image đó. Cách phân biệt những nhãn tên nào là của cùng 1 image là dựa vào image ID (dùng lệnh ```docker images```), các nhãn có cùng image ID nghĩa là cùng image.
     
 - **B2.** Phải tạo repo có tên "nf-pgta" trước, lên website Docker Hub tạo, thì mới có thể đưa image cùng tên lên Docker Hub được.
 
