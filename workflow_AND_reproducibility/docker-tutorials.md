@@ -162,26 +162,27 @@ docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
   - ```<username>``` = username Docker Hub của bạn (ví dụ: khaingyn)
   - ```<repository>``` = tên repo bạn muốn đặt trên Docker Hub (nếu chưa có sẽ tự tạo khi push)
   - ```<tag>``` = tùy chọn (mặc định là latest)
-  - Ví dụ gán thêm nhãn tên mới ```khainguyn/nf-pgta``` cho ```thanhntt2003hcm/nf-pgta:bwa```:
+  - Ví dụ gán thêm nhãn tên mới ```khaingyn/nf-pgta``` cho ```thanhntt2003hcm/nf-pgta:bwa```:
    ```
-   docker tag thanhntt2003hcm/nf-pgta:bwa khainguyn/nf-pgta
+   docker tag thanhntt2003hcm/nf-pgta:bwa khaingyn/nf-pgta
    ```
   - Dùng ```docker images``` kiểm tra lại, output:
     ```
     REPOSITORY                TAG       IMAGE ID       CREATED       SIZE
-    khainguyn/nf-pgta         latest    649331b3a8f5   8 hours ago   48.3GB
+    khaingyn/nf-pgta         latest    649331b3a8f5   8 hours ago   48.3GB
     thanhntt2003hcm/nf-pgta   bwa       649331b3a8f5   8 hours ago   48.3GB
     thanhntt2003hcm/nf-pgta   latest    b3f466b0bda5   2 weeks ago   33.2GB
     ```
     bạn có thể thấy ở cột SIZE là có 2 cái 48.3GB, như tôi đã nói phía trên. Chỉ là 2 cái nhãn tên của 1 image thôi, nên trong storage hiện tại chỉ dùng 48.3GB cho image đó, chứ không phải 48.3GB x2.
-    <img width="722" height="118" alt="image" src="https://github.com/user-attachments/assets/bd274436-1887-4143-b16f-0e6ce33b6cc6" />
-
   - Nếu như bạn không muốn dùng nhãn cũ nữa thì có thể xoá:
     ```
     docker rmi thanhntt2003hcm/nf-pgta
     ```
     Chỉ cần image đó còn ít nhất 1 nhãn tên sau khi xoá, thì image sẽ còn trong local. Nếu như image đó chỉ có duy nhất 1 nhãn tên, thì khi dùng lệnh ```docker rmi``` thì sẽ xoá luôn cả nhãn đó và image đó.
-- **B2.** Tiến hành đưa image lên Docker Hub. Dùng lệnh:
+    
+- **B2.** Phải tạo repo có tên "nf-pgta" trước, lên website Docker Hub tạo, thì mới có thể đưa image cùng tên lên Docker Hub được.
+
+- **B3.** Tiến hành đưa image lên Docker Hub. Dùng lệnh:
   ```
   docker push khainguyn/nf-pgta
   ```
