@@ -24,6 +24,16 @@
   ```
   docker rmi -f <image_id>
   ```
+- Tạo image từ file **Dockerfile**:
+  ```
+  docker build -t user_name/repo_name:tag path/to/Dockerfile
+  ```
+  Trong đó,
+  - user_name: nên đặt trùng với user_name của tài khoản docker hub (1 trang web lưu trữ Docker image giống như GitHub lưu trữ code, có tạo repo) để thuận tiện cho việc đưa image lên DockerHub (dùng lệnh ```docker pull```) sau này.
+  - repo_name: tên của repo chứa Docker image đó
+  - tag: như là 1 chú thích gì đó tuỳ bạn, nếu không đặt ':tag' thì docker tự gán tag là 'latest' (dùng lệnh ```docker images``` để liệt kê các image đã tạo trong local, xem cột "TAG" sẽ thấy).
+  - path/to/Dockerfile: là đường dẫn tới thư mục chứa file **Dockerfile** (không nhất thiết dẫn tới tên file của **Dockerfile** trừ khi bạn đặt tên khác, chỉ cần dẫn tới thư mục chứa **Dockerfile**, Docker daemon sẽ tự quét tìm **Dockerfile**
+
 ## Thao tác với Docker container:
 vào docker:
 ```
