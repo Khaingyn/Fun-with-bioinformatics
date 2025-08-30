@@ -30,11 +30,11 @@ Dockerfile và .dockerignore luôn luôn được gửi vào build context cho d
   ```
 - Tạo image từ file **Dockerfile**:
   ```
-  docker build -t user_name/image_name:tag path/to/Dockerfile
+  docker build -t user_name/repo:tag path/to/Dockerfile
   ```
   Trong đó,
   - user_name: nên đặt trùng với user_name của tài khoản docker hub (1 trang web lưu trữ Docker image giống như GitHub lưu trữ code, có tạo repo) để thuận tiện cho việc đưa image lên DockerHub (dùng lệnh ```docker pull```) sau này.
-  - image_name: tên của Docker image đó.
+  - repo: tên của repo chứa Docker image đó.
   - tag: như là 1 chú thích gì đó tuỳ bạn, nếu không đặt ':tag' thì docker tự gán tag là 'latest' (dùng lệnh ```docker images``` để liệt kê các image đã tạo trong local, xem cột "TAG" sẽ thấy).
   - path/to/Dockerfile: là đường dẫn tới thư mục chứa file **Dockerfile** (không nhất thiết dẫn tới tên file của **Dockerfile** trừ khi bạn đặt tên khác, chỉ cần dẫn tới thư mục chứa **Dockerfile**, Docker daemon sẽ tự quét tìm **Dockerfile**.
 
@@ -153,5 +153,13 @@ docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
       ```
       quan trọng là dòng cuối ```Login Succeeded```
 ## Đưa Docker image trong local lên Docker Hub
-- 
+
+- **B1.** Đổi tên image muốn đưa lên, sao cho trùng với username của Docker Hub
+  Trên Docker Hub, image phải có dạng:
+  ```{php}
+  <username>/<repository>:<tag>
+  ```
+  - ```<username>``` = username Docker Hub của bạn (ví dụ: khaingyn)
+  - ```<repository>``` = tên repo bạn muốn đặt trên Docker Hub (nếu chưa có sẽ tự tạo khi push)
+  - ```<tag>``` = tùy chọn (mặc định là latest)
 
