@@ -194,3 +194,6 @@ docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
   docker push khainguyn/nf-pgta
   ```
   Quá trình diễn ra xong nhanh hay lâu sẽ tuỳ thuộc vào tốc độ internet.
+
+  **Lưu ý:**
+  - Không thể sửa tên tag của image đó trong repo Docker Hub. Buộc phải gắn thêm tag mới cho image đó trong local, và push lên lại.
