@@ -50,10 +50,10 @@ Dockerfile và .dockerignore luôn luôn được gửi vào build context cho d
     ```
     
 ## Thao tác với Docker container:
-vào docker:
-```
-docker run -it --name nf_pgta thanhntt2003hcm/nf-pgta:latest bash
-```
+- Tạo và chạy, có thực thi lệnh, container mới từ 1 image:
+  ```
+  docker run -it --name <name_container> <user_name/repo:tag>
+  ```
 - Liệt kê các container đang chạy và đã dừng:
   ```
   docker ps -a
