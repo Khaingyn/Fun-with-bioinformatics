@@ -2,12 +2,14 @@
 
 ## Nguyên lý khi build Docker container từ Docker image
 
-Khi chạy lệnh ```docker build```, Docker daemon sẽ copy toàn bộ nội dung trong thư mục được dẫn tới (mà chứa file **Dockerfile**) trong dòng lệnh vào một cái không gian riêng cho công cụ Docker - gọi là **build context**, sau đó daemon nó mới copy những thứ trong **build context** vào trong image khi build (nếu những thứ đó được yêu cầu copy trong **Dockerfile**). Như vậy nếu những file, folder được yêu cầu copy vào image mà được ghi trong file **.dockerignore**, thì khi build Docker image sẽ bị lỗi. Daemon sẽ copy nội dung trong **build context** vào image (theo yêu cầu trong **Dockerfile**), chứ nó không truy cập vào ổ cứng của máy tính được để mà copy thẳng từ ổ cứng vào image, đây là copy gián tiếp.
+- Khi chạy lệnh ```docker build```, Docker daemon sẽ copy toàn bộ nội dung trong thư mục được dẫn tới (mà chứa file **Dockerfile**) trong dòng lệnh vào một cái không gian riêng cho công cụ Docker - gọi là **build context**, sau đó daemon nó mới copy những thứ trong **build context** vào trong image khi build (nếu những thứ đó được yêu cầu copy trong **Dockerfile**). Như vậy nếu những file, folder được yêu cầu copy vào image mà được ghi trong file **.dockerignore**, thì khi build Docker image sẽ bị lỗi. Daemon sẽ copy nội dung trong **build context** vào image (theo yêu cầu trong **Dockerfile**), chứ nó không truy cập vào ổ cứng của máy tính được để mà copy thẳng từ ổ cứng vào image, đây là copy gián tiếp.
 
-Dockerfile và .dockerignore luôn luôn được gửi vào build context cho dù có bị đưa vào file .dockerignore.
+- Dockerfile và .dockerignore luôn luôn được gửi vào build context cho dù có bị đưa vào file .dockerignore.
 
 **Lưu ý:** Từ "context" trong "build context" không cùng nghĩa với từ "context" trong ```docker context```.
 
+- image A được build xong từ 1 file Dockerfile, sau đó sửa file Dockerfile này ở phần code tạo 1 layer (1 layer mới được tạo bởi RUN, COPY, ADD...). Khi build image B từ Dockerfile sau khi sửa này thì quá trình build chỉ build mỗi layer được tạo bởi phần code được sửa đó, còn các layer còn lại không phải build vì các layer đó đã được build thành công trong quá trình build image A và đã được lưu đệm (cached) trong docker, và docker chia sẻ layer này khi build image khác. Nếu như bất kỳ yếu tố nào liên quan tới layer bị thay đổi, thì khi build image khác từ Dockerfile sửa, cũng sẽ không dùng lại được layer đó (tạo thành công trong quá trình build các image trước), và phải tốn thời gian build mới.
+ 
 ## Thao tác với Docker image
 
 - Liệt kê các image:
