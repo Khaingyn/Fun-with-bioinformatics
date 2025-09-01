@@ -42,8 +42,8 @@ Dockerfile và .dockerignore luôn luôn được gửi vào build context cho d
   ```
   docker history user_name/repo:tag
   ```
-- Khám phá các layers của image. Dùng tool dive (A tool for exploring a Docker image, layer contents, and discovering ways to shrink the size of your Docker/OCI image).
-  - Cần cài dive trước: https://github.com/wagoodman/dive
+- Khám phá các layers của image.
+  - Dùng tool dive (A tool for exploring a Docker image, layer contents, and discovering ways to shrink the size of your Docker/OCI image). Cần cài dive trước: https://github.com/wagoodman/dive
   - Khám phá image trong local:
     ```
     dive user_name/repo:tag
