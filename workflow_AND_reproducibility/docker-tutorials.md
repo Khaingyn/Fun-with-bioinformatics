@@ -102,7 +102,7 @@ Dockerfile và .dockerignore luôn luôn được gửi vào build context cho d
   ```
   
 # Docker Hub
-
+https://docs.docker.com/security/access-tokens/
 ## Đăng nhập Docker Hub bằng commandline:
 Để đưa 1 Docker image (đã tạo trong local) lên Docker Hub, cần đăng nhập tài khoản trước (nếu bạn đã tạo rồi). 
 - Chưa bật 2FA → bạn có 2 lựa chọn: dùng password hoặc token để login.
