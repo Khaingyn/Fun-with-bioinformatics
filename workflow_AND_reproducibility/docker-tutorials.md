@@ -9,7 +9,10 @@
 **Lưu ý:** Từ "context" trong "build context" không cùng nghĩa với từ "context" trong ```docker context```.
 
 - image A được build xong từ 1 file Dockerfile, sau đó sửa file Dockerfile này ở phần code tạo 1 layer (1 layer mới được tạo bởi RUN, COPY, ADD...). Khi build image B từ Dockerfile sau khi sửa này thì quá trình build chỉ build mỗi layer được tạo bởi phần code được sửa đó, còn các layer còn lại không phải build vì các layer đó đã được build thành công trong quá trình build image A và đã được lưu đệm (cached) trong docker, và docker chia sẻ layer này khi build image khác. Nếu như bất kỳ yếu tố nào liên quan tới layer bị thay đổi, thì khi build image khác từ Dockerfile sửa, cũng sẽ không dùng lại được layer đó (tạo thành công trong quá trình build các image trước), và phải tốn thời gian build mới.
- 
+
+ - Image = nhiều layer read-only chồng lên nhau. Container = image + 1 layer read-write.
+   <img width="706" height="464" alt="image" src="https://github.com/user-attachments/assets/b76e72f8-f31c-4f43-b1b9-c3e91280a13f" />
+
 ## Thao tác với Docker image
 
 - Liệt kê các image:
