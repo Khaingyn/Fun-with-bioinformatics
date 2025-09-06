@@ -7,3 +7,12 @@
 ```
 git clone <http link or SSH link of repo>
 ```
+Trước khi `clone` về máy local, có vài điều cần biết và thiết lập trước:
+
+1. Nếu như repo này là **public** và chủ sở hữu là tài khoản của bạn, 
+
+
+
+Khôi phục lại trang thái trước khi `git add/commit`
+- Restore sau git add
+- Restore sau git commit
