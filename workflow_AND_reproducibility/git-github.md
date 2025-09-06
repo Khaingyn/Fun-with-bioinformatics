@@ -5,7 +5,7 @@
 Để bắt đầu sử dụng với git, cần phải có một repository đã được tạo trên Github. Sau đó, thực hiện tải repo này về máy local với lệnh:
 
 ```
-git clone <http link or SSH link of repo>
+git clone <http_link_or_SSH_link_of_repo>
 ```
 Trước khi `clone` về máy local, có vài điều cần biết và thiết lập trước:
 
@@ -14,6 +14,68 @@ Trước khi `clone` về máy local, có vài điều cần biết và thiết 
 ok kkk
 
 
-Khôi phục lại trang thái trước khi `git add/commit`
-- Restore sau git add
-- Restore sau git commit
+## Khôi phục lại trạng thái của file trước khi `git add/commit`
+
+Quy trình cập nhật file được sửa từ repo local lên repo github thường là:
+
+```
+file_A -->file_A_editted --git_add--> stage --git_commit--> git_push--> update_on_github
+
+```
+
+trạng thái file_A đã được `git push` lên github, bạn sửa **file_A** này trong repo local, thành **file_A_editted**. Đột nhiên vì lý do nào đó, bạn không muốn **file_A_editted** nữa và muốn quay lại **file_A**, nhưng **file_A_editted** đã được lưu và không thể ctrl+Z quay lại lúc chưa sửa. Lúc này bạn `git status` để check lại trạng thái file này trong repo local với repo github, sau đó:
+
+```
+git restore file_A_editted
+```
+
+- lúc này, nội dung **file_A_editted** sẽ trở lại như **file_A**.
+
+Hoặc trong ngữ cảnh khác, bạn vẫn muốn giữ nguyên **file_A_editted**, sau đó bạn `git add` **file_A_editted** và bạn cũng làm tương tự vậy với vài file khác để chuẩn bị `git commit` rồi `git push` lên github, nhưng vì lý do nào đó, bạn chỉ muốn `git commit` các file kia, chưa muốn `git commit` **file_A_editted**, để  huỷ add **file_A_editted**, thực hiện:
+
+```
+git restore --staged file_A_editted
+```
+
+- sau đó bạn `git status` để kiểm tra, nếu tên **file_A_editted** có màu đỏ là đã huỷ git add thành công.
+
+## Repo GitHub mới hơn repo local
+
+Khi 1 repo github có từ 2 người đóng góp trở lên (tức chủ repo github đó mời thêm collaborators), các thành viên sẽ liên tục `git push` từ repo local của họ lên repo github để cập nhật sửa đổi cho repo github. 
+
+Khi bạn muốn xem hoặc có thể sửa/cập nhật tiếp tục các file mà thành viên khác đã tạo/sửa đổi, bạn cần  đồng bộ repo local của bạn với repo github để repo local có trạng thái file mới nhất sau đó mới tiến hành sửa trên các file mới này và lại `git add, git commit, git push` các kiểu sau khi sửa. Để thực hiện đồng bộ, dùng lệnh:
+
+```
+git pull origin main
+```
+
+- Trước khi `git pull`, muốn:
+
+1. Cho xem  "commit" nào có trong repo github (**origin/main**) nhưng bị thiếu trong repo local (**HEAD**), nghĩa là repo github có các commit mới mà repo local chưa có:
+
+    ```
+    git log HEAD..origin/main --oneline
+    ```
+    
+    - Ví dụ, tôi thay đổi file git-github.md trên github, sau đó tôi chạy `git log` trong terminal, kết quả in ra:
+
+            ```
+            4de8cf4 (origin/main, origin/HEAD) Update git-github.md
+            ```
+
+        - `4de8cf4` → commit hash
+        - `Update git-github.md` → commit message
+
+2. Xem files nào đã được thay đổi giữa repo local và repo github:
+
+    ```
+    git diff HEAD..origin/main --name-only
+    ```
+
+    - Ví dụ, kết quả in ra:
+
+        ```
+        workflow_AND_reproducibility/git-github.md
+        ```
+        --> duy nhất file git-github.md có sự thay đổi, và nằm trong commit từ show bằng `git log` 
+
