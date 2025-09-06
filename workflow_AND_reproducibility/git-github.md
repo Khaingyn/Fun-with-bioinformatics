@@ -11,10 +11,29 @@ Trước khi `clone` về máy local, có vài điều cần biết và thiết 
 
 1. Nếu như repo này là **public** và chủ sở hữu là tài khoản của bạn, 
 
-```
 
-```
+Sau đó:
 
+Tất cả các lệnh sau phải được thực hiện khi bạn đang ở level thư mục cao nhất của thư mục repo github đã clone về (thư mục làm việc: working directory - wd), tức ví dụ bạn `git clone` repo Fun-with-bioinformatics, sẽ có thư mục tên "Fun-with-bioinformatics" trong máy local, thì bạn phải đang ở thư mục "Fun-with-bioinformatics" chứ không phải "Fun-with-bioinformatics/thư_mục_con" nào đó.
+
+1. Thêm tất cả các file có sự thay đổi vào **vùng stage**
+    ```
+    git add .
+    ```
+    - hoặc bạn chỉ muốn thêm cụ thể file nào đó:
+        ```
+        git add ./path/to/file
+        ```
+2. Commit: Đính kèm các tin nhắn cho sự thay đổi sắp được cập nhật vào repo github
+
+    ```
+    git commit -m "Cap nhat cai nay nha ba con"
+    ```
+    - hoặc bạn có nội dung tin nhắn dài hơn "Cap nhat cai nay nha ba con" thì:
+        ```
+        git commit
+        ```
+        lúc này terminal sẽ mở 1 text editor, chẳng hạn như nano, 
 
 ## Khôi phục lại trạng thái của file
 
@@ -25,13 +44,13 @@ file_A -->file_A_editted --git_add--> stage --git_commit--> git_push--> update_o
 
 ```
 
-trạng thái file_A đã được `git push` lên github, bạn sửa **file_A** này trong repo local, thành **file_A_editted**. Đột nhiên vì lý do nào đó, bạn không muốn **file_A_editted** nữa và muốn quay lại **file_A**, nhưng **file_A_editted** đã được lưu và không thể ctrl+Z quay lại lúc chưa sửa. Lúc này bạn `git status` để check lại trạng thái file này trong repo local với repo github, sau đó:
+trạng thái file_A đã được `git push` lên github, bạn sửa **file_A** này trong repo local, thành **file_A_editted**. Đột nhiên vì lý do nào đó, bạn không muốn **file_A_editted** nữa và muốn quay lại **file_A**, nhưng **file_A_editted** đã được lưu và không thể ctrl+Z quay lại lúc chưa sửa. Để quay lại **file_A**, thực hiện:
 
 ```
 git restore file_A_editted
 ```
 
-- lúc này, nội dung **file_A_editted** sẽ trở lại như **file_A**.
+- lúc này, nội dung **file_A_editted** sẽ trở lại như **file_A**. Trước khi `git restore`, bạn có thể  `git status` để check xem là có đúng **file_A_editted** có bị thay đổi so với commit mới nhất không (là **file_A**).
 
 Hoặc trong ngữ cảnh khác, bạn vẫn muốn giữ nguyên **file_A_editted**, sau đó bạn `git add` **file_A_editted** và bạn cũng làm tương tự vậy với vài file khác để chuẩn bị `git commit` rồi `git push` lên github, nhưng vì lý do nào đó, bạn chỉ muốn `git commit` các file kia, chưa muốn `git commit` **file_A_editted**, để  huỷ add **file_A_editted**, thực hiện:
 
