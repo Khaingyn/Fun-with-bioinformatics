@@ -11,29 +11,63 @@ Trước khi `clone` về máy local, có vài điều cần biết và thiết 
 
 1. Nếu như repo này là **public** và chủ sở hữu là tài khoản của bạn, 
 
+2. 
 
-Sau đó:
+**Sau khi đăng nhập xong:**
 
 Tất cả các lệnh sau phải được thực hiện khi bạn đang ở level thư mục cao nhất của thư mục repo github đã clone về (thư mục làm việc: working directory - wd), tức ví dụ bạn `git clone` repo Fun-with-bioinformatics, sẽ có thư mục tên "Fun-with-bioinformatics" trong máy local, thì bạn phải đang ở thư mục "Fun-with-bioinformatics" chứ không phải "Fun-with-bioinformatics/thư_mục_con" nào đó.
 
-1. Thêm tất cả các file có sự thay đổi vào **vùng stage**
+1. Thêm tất cả các file có sự thay đổi vào **vùng stage**, chạy lệnh:
     ```
     git add .
     ```
-    - hoặc bạn chỉ muốn thêm cụ thể file nào đó:
+    - hoặc bạn chỉ muốn thêm cụ thể file nào đó, chạy lệnh:
         ```
         git add ./path/to/file
         ```
-2. Commit: Đính kèm các tin nhắn cho sự thay đổi sắp được cập nhật vào repo github
+2. Commit: Đính kèm các tin nhắn cho sự thay đổi sắp được cập nhật vào repo github. Chạy lệnh:
 
     ```
     git commit -m "Cap nhat cai nay nha ba con"
     ```
-    - hoặc bạn có nội dung tin nhắn dài hơn "Cap nhat cai nay nha ba con" thì:
+    - hoặc bạn có nội dung tin nhắn dài hơn "Cap nhat cai nay nha ba con" thì chạy lệnh:
         ```
         git commit
         ```
-        lúc này terminal sẽ mở 1 text editor, chẳng hạn như nano, 
+        lúc này terminal sẽ mở 1 text editor, chẳng hạn như nano, và sẽ có nội dung như sau:
+        ```
+        # Please enter the commit message for your changes. Lines starting
+        # with '#' will be ignored, and an empty message aborts the commit.
+        #
+        # Changes to be committed:
+        #       new file:   workflow_AND_reproducibility/git-github.md
+        ```
+        hãy nhập tin nhắn ở hàng đầu tiên, ví dụ:
+        ```
+        Cap nhat sieu cap nha hehehehe
+        # Please enter the commit message for your changes. Lines starting
+        # with '#' will be ignored, and an empty message aborts the commit.
+        #
+        # Changes to be committed:
+        #       new file:   workflow_AND_reproducibility/git-github.md
+        ```
+        sau đó lưu file lại (ctrl+X --> Y --> enter). Terminal ra output:
+        ```
+        [main 70fc1e1] Cap nhat sieu cap nha hehehehe
+        1 file changed, 23 insertions(+), 4 deletions(-)
+        ```
+        vậy là commit thành công.
+
+3. Đưa các sửa đổi từ repo local lên repo github. Sau khi commit xong, chạy lệnh:
+
+    ```
+    git push
+    ```
+    sau đó bạn lên github website để kiểm tra.
+
+
+
+
 
 ## Khôi phục lại trạng thái của file
 
