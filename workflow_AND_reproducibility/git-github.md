@@ -11,6 +11,7 @@ Trước khi `clone` về máy local, có vài điều cần biết và thiết 
 
 1. Nếu như repo này là **public** và chủ sở hữu là tài khoản của bạn, 
 
+ok kkk
 
 
 Khôi phục lại trang thái trước khi `git add/commit`
