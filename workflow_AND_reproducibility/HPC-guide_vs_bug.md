@@ -6,6 +6,10 @@
 
 **Bước 2. Truy cập vào HPC (server) từ máy tính cá nhân (local) bằng công cụ ssh**
 
+```
+ssh -i ~/.ssh/id_rsa username@server_address
+```
+
 **Bước 3. Submit job bằng công cụ slurm**
 
 **->** Từ lần thứ 2 trở đi thì chỉ cần bắt đầu từ bước 2, không cần phải tạo key nữa.
