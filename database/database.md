@@ -26,7 +26,7 @@ người ta chia ra hẳn bên ngoài để ở **Standard genome sequence files
   
     <img width="542" height="299" alt="image" src="https://github.com/user-attachments/assets/157497de-2d9e-4984-9787-018554b436f5" />
 
-- Tuy nhiên, để dùng Human genome fasta làm "reference genome" trong bước mapping/aligment (sử dụng các công cụ mapping/aligner như bowtie, bwa,..) các đoạn đọc (reads - từ máy giải trình tự NGS), thì NCBI có cung cấp 1 bản fasta riêng chuyên cho việc này, đó là "Analysis set sequence files":
+- Tuy nhiên, để dùng Human genome fasta làm "reference genome" trong bước mapping/aligment (sử dụng các công cụ mapping/aligner như bowtie, bwa,..) các đoạn đọc (reads - từ máy giải trình tự NGS), thì NCBI có cung cấp 1 bản fasta riêng chuyên cho việc này, đó là "Analysis set sequence files". Bộ genenome Analysis set này không có các "alt", với genome có "alt" như trong hướng dẫn trước, thì hiện này có công cụ [BWA-MEM](https://github.com/lh3/bwa?tab=readme-ov-file#6-does-bwa-work-with-alt-contigs-in-the-grch38-release) xử lý được , còn hầu hết các tool khác thì không. "Analysis set sequence files":
 
   <img width="731" height="127" alt="image" src="https://github.com/user-attachments/assets/7200239f-4883-41c5-b475-fae1cc9d6c03" />
 
@@ -39,6 +39,10 @@ người ta chia ra hẳn bên ngoài để ở **Standard genome sequence files
 
     <img width="610" height="160" alt="image" src="https://github.com/user-attachments/assets/b4e4772e-1041-481a-a20c-b6db2bb37ef1" />
 
+    (https://hgdownload.soe.ucsc.edu/goldenPath/hg38/bigZips/analysisSet/hg38.analysisSet.fa.gz)
+
+    - Một link khác để tải hg38 làm ref genome: https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz
+   
   - Với hg19 thì cũng có, hãy chọn dòng đầu tiên **Genome sequence files and select annotations (2bit, GTF, GC-content, etc)**, kéo xuống cuối, vào đường dẫn này:
 
     <img width="524" height="81" alt="image" src="https://github.com/user-attachments/assets/f043b43e-2bf4-4111-95a4-cdf66f950edd" />
@@ -46,6 +50,10 @@ người ta chia ra hẳn bên ngoài để ở **Standard genome sequence files
     - Nó sẽ dẫn sang trang khác, file fasta hg19 cần tải:
 
       <img width="736" height="173" alt="image" src="https://github.com/user-attachments/assets/ad9be759-87bf-45fa-98fc-4f34703ea0b3" />
+
+      (https://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/analysisSet/hg19.p13.plusMT.no_alt_analysis_set.fa.gz)
+
+  
 
 - Nếu như chỉ muốn lấy trình tự của 1 hoặc 1 vài nhiễm sắc thể, thì có thể vào mục thứ 2 **Sequence data by chromosome**:
 
