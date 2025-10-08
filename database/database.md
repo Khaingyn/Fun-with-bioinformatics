@@ -6,6 +6,7 @@ Hiện tại có 2 phiên bản genome của người (human) được dùng ph�
 
 ### UCSC
 Website: https://hgdownload.soe.ucsc.edu/downloads.html
+FAQ: https://genome.ucsc.edu/FAQ/
 
 - Ngay đầu trang chủ, ở mục "Human genomes", sẽ thấy ngay 2 version hg38: **Dec. 2013 (GRCh38/hg38)** và hg 19: **Feb. 2009 (GRCh37/hg19)**:
 
@@ -33,8 +34,9 @@ người ta chia ra hẳn bên ngoài để ở **Standard genome sequence files
   *Tìm hiểu thêm "Analysis set":  
   1)https://genome.ucsc.edu/FAQ/FAQdownloads.html#downloadAnalysis  
   2)https://ftp.ncbi.nlm.nih.gov/genomes/all/GCA/000/001/405/GCA_000001405.15_GRCh38/seqs_for_alignment_pipelines.ucsc_ids/README_analysis_sets.txt  
-  3)https://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Eukaryotes/vertebrates_mammals/Homo_sapiens/GRCh37.p13/seqs_for_alignment_pipelines/README_ANALYSIS_SETS*
-
+  3)https://ftp.ncbi.nlm.nih.gov/genomes/archive/old_genbank/Eukaryotes/vertebrates_mammals/Homo_sapiens/GRCh37.p13/seqs_for_alignment_pipelines/README_ANALYSIS_SETS  
+  4)BWA-MEM cho ref+alt: https://gatk.broadinstitute.org/hc/en-us/articles/360037498992--How-to-Map-reads-to-a-reference-with-alternate-contigs-like-GRCH38*
+  
   - Vào mục đó, kéo xuống dưới cùng, sẽ thấy file fasta cần tải:
 
     <img width="610" height="160" alt="image" src="https://github.com/user-attachments/assets/b4e4772e-1041-481a-a20c-b6db2bb37ef1" />
@@ -67,9 +69,16 @@ người ta chia ra hẳn bên ngoài để ở **Standard genome sequence files
 
     <img width="456" height="65" alt="image" src="https://github.com/user-attachments/assets/87f6b0af-342f-4f47-beab-281050a151a0" />
 
-
-  
+- Tìm hiểu thêm về Human genome:
+  - https://gatk.broadinstitute.org/hc/en-us/articles/360035890951-Human-genome-reference-builds-GRCh38-or-hg38-b37-hg19
+  - What is hg19/hg38? - All you need to know about human reference genomes- YOUTUBE: https://www.youtube.com/watch?v=DeZTPCOKZrg&t=433s
 ## Chưa phân loại
-
 Đây là các database mà mình biết được từ các diễn đàn thảo luận, thấy hay, nhưng chưa tìm hiểu nên để tạm ở mục này.
+
+
+
+
+
+
+
 
