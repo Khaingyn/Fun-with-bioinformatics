@@ -55,6 +55,12 @@ người ta chia ra hẳn bên ngoài để ở **Standard genome sequence files
 
       (https://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/analysisSet/hg19.p13.plusMT.no_alt_analysis_set.fa.gz)
 
+  - Hãy đọc bài này trước khi quyết định chọn version nào:
+
+    - 2023, HengLi's Github: https://github.com/lh3/ref-gen/blob/main/README.md
+      - A blog của HengLi 2017: https://lh3.github.io/2017/11/13/which-human-reference-genome-to-use
+    - https://github.com/PacificBiosciences/reference_genomes/blob/main/README.md
+    
   
 
 - Nếu như chỉ muốn lấy trình tự của 1 hoặc 1 vài nhiễm sắc thể, thì có thể vào mục thứ 2 **Sequence data by chromosome**:
