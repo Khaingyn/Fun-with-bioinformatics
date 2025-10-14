@@ -20,17 +20,22 @@
   - Paper: https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-024-10620-8
   - Source code: https://github.com/amromics/amromics
 
+## 2023
+
+- MEGAnnotator2: a pipeline for the assembly and annotation of microbial genomes
+  - Paper: https://www.oaepublish.com/articles/mrr.2022.21
+  - Source code: https://probiogenomics.unipr.it/cmu/
 
 
 ## 2020
 
-- bactopia: a flexible pipeline for complete analysis of bacterial genomes
+- bactopia: a flexible pipeline for complete analysis of bacterial genomes [BEST]
   - Paper: https://bactopia.github.io/latest/impact-and-outreach/acknowledgements/#bactopia-citation
   - Source code: https://bactopia.github.io/latest/
 
 
 ## 2019
 
-- TORMES (good):
+- TORMES [GOOD]:
   - Paper: https://doi.org/10.1093/bioinformatics/btz220
   - Source code: [https://github.com/amromics/amromics](https://github.com/nmquijada/tormes)
