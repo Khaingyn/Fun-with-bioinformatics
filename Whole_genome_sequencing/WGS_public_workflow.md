@@ -20,6 +20,8 @@
   - Paper: https://bmcgenomics.biomedcentral.com/articles/10.1186/s12864-024-10620-8
   - Source code: https://github.com/amromics/amromics
 
+- bacLIFE: an automated genome mining tool for identification of lifestyle associated genes
+  - Source code: https://github.com/Carrion-lab/bacLIFE
 ## 2023
 
 - MEGAnnotator2: a pipeline for the assembly and annotation of microbial genomes
