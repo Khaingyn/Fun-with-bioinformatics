@@ -21,6 +21,26 @@ ssh -i ~/.ssh/id_rsa username@server_address
     scp -r username@server_address:/path/to/data_hpc /path/to/folder_local
     ```
     Trong đó, /path/to/data_hpc là đường dẫn tuyệt đối của thư mục hoặc file trên máy hpc mà bạn đang muốn chuyển sang local, /path/to/folder_local là đường dẫn tuyệt đối (hoặc đường dẫn tương đối) của thư mục trên local mà bạn đang muốn lưu.
+
+## Một số lệnh hay dùng
+
+### Xem dung lượng
+- Xem dung lượng tổng của 1 thư mục: `du -sh /đường/dẫn/tới/thư_mục`
+
+- Xem cpu, ram của tất cả job (tất cả user trong hpc) đang được submit:
+  ```
+  squeue -o "%.10i %.15u %.25j %.4C %.10m %.10M %.8T %.10P"
+  ```
+### tmux
+- Tạo phiên làm việc mới (new session): `tmux new -s mywork`
+- 
+### Submit job
+#### srun
+```
+srun --pty --job-name=khaipgta --cpus-per-task=4 --mem=8G --time=02:00:00 bash
+```
+#### 
+
 ## Lỗi từng gặp trong quá trình sử dụng
 
 **sign_and_send_pubkey: signing failed for RSA ".ssh/id_rsa" from agent: agent refused operation
