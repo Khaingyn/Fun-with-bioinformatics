@@ -1,4 +1,4 @@
-- Find similarity between 2 genome:
+- Find similarity between 2 genome:  
   https://github.com/MrOlm/drep
   https://github.com/ParBLiSS/FastANI
   https://gtdb.ecogenomic.org/tools/fastani
