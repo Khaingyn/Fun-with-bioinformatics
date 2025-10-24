@@ -1,0 +1,4 @@
+- AMR ++ Pipeline: https://www.meglab.org/amrplusplus/
+- argNorm: Normalize ARG annotations to the ARO
+  - https://github.com/BigDataBiology/argNorm?tab=readme-ov-file
+- 
