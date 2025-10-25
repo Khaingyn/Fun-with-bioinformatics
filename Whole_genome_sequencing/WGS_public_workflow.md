@@ -41,3 +41,8 @@
 - TORMES [GOOD]:
   - Paper: https://doi.org/10.1093/bioinformatics/btz220
   - Source code: [https://github.com/amromics/amromics](https://github.com/nmquijada/tormes)
+ 
+# organellar genomes
+## 2025
+- PMAT2 is a specialized tool for the de novo assembly of mitochondrial and chloroplast genomes from HiFi and ONT/CLR data.
+  https://github.com/aiPGAB/PMAT2
