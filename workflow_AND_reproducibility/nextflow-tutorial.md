@@ -38,7 +38,8 @@
   Removed /media/jojo/catwalk/training/hello-nextflow/work/d5/1f0e08780b470def191728ed16d3d1
   ```
 
-- **Chạy 1 workflow với 1 file json lưu trữ các tham số (khi 1 lệnh chạy netxflow có quá nhiều tham số, có thể dùng cách khác là paste toàn bộ lệnh lext run với các tham số vào 1 file .sh, sau đó run run file này)**
+- **Chạy 1 workflow với 1 file json lưu trữ các tham số của workflow**
+  khi 1 lệnh chạy netxflow có quá nhiều tham số (có thể dùng cách khác là paste toàn bộ lệnh lext run với các tham số vào 1 file .sh, sau đó run run file này), dùng -params-file
   ```
   nextflow run hello-config.nf -params-file test-params.json
   ````
@@ -50,4 +51,5 @@
     "character": "milk"
     }
     ```
+
 
