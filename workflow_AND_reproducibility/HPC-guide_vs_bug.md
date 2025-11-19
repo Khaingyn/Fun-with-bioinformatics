@@ -22,6 +22,10 @@ ssh -i ~/.ssh/id_rsa username@server_address
     ```
     Trong đó, /path/to/data_hpc là đường dẫn tuyệt đối của thư mục hoặc file trên máy hpc mà bạn đang muốn chuyển sang local, /path/to/folder_local là đường dẫn tuyệt đối (hoặc đường dẫn tương đối) của thư mục trên local mà bạn đang muốn lưu.
 
+ - Copy thư mục wgs_pen từ hpc về local, và ko copy thư mục data/ (folder con nằm trong wgs_pen), tại vị trí hiện tại chạy lệnh trên local sẽ có thư mục wgs_pen:
+   ```
+   rsync -av khainguyen@trongchinh.zapto.org:/mnt/10T2/huyha/precisiongene/wgs_pen . --exclude='data/'
+   ```
 ## Một số lệnh hay dùng
 
 ### Xem dung lượng
