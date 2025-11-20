@@ -16,16 +16,21 @@ ssh -i ~/.ssh/id_rsa username@server_address
 
 ## Chuyển dữ liệu giữa HPC, local và cloud với nhau
 **1. Chuyển dữ liệu từ HPC sang local**
-  - Chạy lệnh scp trong terminal của local:
+  - Lệnh scp (chạy trong terminal của local):
     ```
     scp -r username@server_address:/path/to/data_hpc /path/to/folder_local
     ```
     Trong đó, /path/to/data_hpc là đường dẫn tuyệt đối của thư mục hoặc file trên máy hpc mà bạn đang muốn chuyển sang local, /path/to/folder_local là đường dẫn tuyệt đối (hoặc đường dẫn tương đối) của thư mục trên local mà bạn đang muốn lưu.
 
- - Copy thư mục wgs_pen từ hpc về local, và ko copy thư mục data/ (folder con nằm trong wgs_pen), tại vị trí hiện tại chạy lệnh trên local sẽ có thư mục wgs_pen:
+ - Lệnh rsync (chạy trong terminal của local): Copy thư mục wgs_pen từ hpc về local, và ko copy thư mục data/ (folder con nằm trong wgs_pen), tại vị trí hiện tại chạy lệnh trên local sẽ có thư mục wgs_pen:
    ```
    rsync -av khainguyen@trongchinh.zapto.org:/mnt/10T2/huyha/precisiongene/wgs_pen . --exclude='data/'
    ```
+**2. Tải data từ folder gg drive của người khác (đã được share truy cập)**
+  - Tải các file nằm trong thư mục GTT_13.11.25/DATA/S250113192/ về thư mục hiện tại:
+  ```
+  rclone copy "ggdrive:GTT_13.11.25/DATA/S250113192" . --drive-shared-with-me --progress
+  ```
 ## Một số lệnh hay dùng
 
 ### Xem dung lượng
