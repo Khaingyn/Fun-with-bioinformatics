@@ -32,7 +32,11 @@ ssh -i ~/.ssh/id_rsa username@server_address
     ```
   - khác:
     ```
-    rclone copy hpc2:/mnt/data18tb/precigene/PGT-A/nf_pgta/ ./PGT-A_pipeline/pgta_pe/ -P --transfers 12 --checkers 24 --exclude='clone_se/**' --exclude='bwa/**'
+    rclone copy hpc2:/mnt/data18tb/precigene/PGT-A/nf_pgta/ ./PGT-A_pipeline/pgta_pe/ \
+      -P --transfers 12 \
+      --checkers 24 \
+      --exclude='clone_se/**' \
+      --exclude='bwa/**'
     ```
 **2. Tải data từ folder gg drive của người khác (đã được share truy cập)**
   - Tải các file nằm trong thư mục GTT_13.11.25/DATA/S250113192/ về thư mục hiện tại:
