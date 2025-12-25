@@ -38,10 +38,6 @@ ssh -i ~/.ssh/id_rsa username@server_address
       --exclude='clone_se/**' \
       --exclude='bwa/**'
     ```
-  **Lưu ý quan trọng**
-    Khi dùng ID, rclone coi cái ID đó là gốc của thư mục.  
-    Nếu file nằm ngay trong folder đó -> Chỉ cần gõ tên file (file.txt).  
-    Nếu file nằm trong thư mục con của folder đó -> Phải gõ kèm đường dẫn con (subfolder/file.txt).
     
 **2. Tải data từ folder gg drive của người khác (đã được share truy cập)**
   - Tải các file nằm trong thư mục GTT_13.11.25/DATA/S250113192/ về thư mục hiện tại:
@@ -85,6 +81,11 @@ ssh -i ~/.ssh/id_rsa username@server_address
     tai_lieu_2024.pdf
     hinh_anh/logo.png
     ```
+    **Lưu ý quan trọng**
+    Khi dùng ID, rclone coi cái ID đó là gốc của thư mục.  
+    Nếu file nằm ngay trong folder đó -> Chỉ cần gõ tên file (file.txt).  
+    Nếu file nằm trong thư mục con của folder đó -> Phải gõ kèm đường dẫn con (subfolder/file.txt).
+    
 ## Thiết lập ssh giữa client và server, khi ở tỉnh thành xa, dùng tailscale
 1. Cùng cài tailscale và run những lệnh sau trên cả máy client và server:
    ```bash
