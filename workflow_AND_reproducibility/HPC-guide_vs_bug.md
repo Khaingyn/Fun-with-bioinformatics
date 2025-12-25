@@ -45,7 +45,7 @@ ssh -i ~/.ssh/id_rsa username@server_address
   ```
 
   - Nên dùng folder ID sẽ dễ hơn và chính xác hơn, vì đôi khi có 2 folder được share với mình lại có cùng tên nhưng khác tài khoản.
-    - Bước 1: Lấy ID của folder mong muốn
+    - Lấy ID của folder mong muốn
 
       1. Mở trình duyệt web và truy cập Google Drive.
 
@@ -59,9 +59,27 @@ ssh -i ~/.ssh/id_rsa username@server_address
 
         Thì ID là: 1A2b3C4d5E6f7G8h9I0j
       ```
-      rclone copy "ggdrive:1A2b3C4d5E6f7G8h9I0j" . --drive-shared-with-me --progress
+      rclone copy "ggdrive:1A2b3C4d5E6f7G8h9I0j" . --progress
       ```
-
+      (không cần dùng *--drive-shared-with-me* nữa, vì ID là duy nhất)
+  - Tải 1 file trong folder được share:
+    ```
+    rclone copy "ggdrive:1A2b3C4d5E6f7G8h9I0j/file_A" . --progress
+    ```
+  - Tải 2, 3 file trong folder được share:
+    ```
+    rclone copy "ggdrive:1A2b3C4d5E6f7G8h9I0j/file_A" . --include "video1.mp4" --include "bao_cao.pdf" --progress
+    ```
+  - Tải nhiều file trong folder được share, dùng file danh sách:
+    ```
+    rclone copy "ggdrive:1A2b3C4d5E6f7G8h9I0j/file_A" . --files-from list-file.txt --progress
+    ```
+    Trong *list-file.txt*, mỗi tên file là 1 dòng:
+    ```
+    video_tong_ket.mp4
+    tai_lieu_2024.pdf
+    hinh_anh/logo.png
+    ```
 ## Thiết lập ssh giữa client và server, khi ở tỉnh thành xa, dùng tailscale
 1. Cùng cài tailscale và run những lệnh sau trên cả máy client và server:
    ```bash
