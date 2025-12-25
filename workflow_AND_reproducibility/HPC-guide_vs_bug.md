@@ -43,6 +43,25 @@ ssh -i ~/.ssh/id_rsa username@server_address
   ```
   rclone copy "ggdrive:GTT_13.11.25/DATA/S250113192" . --drive-shared-with-me --progress
   ```
+
+  - Nên dùng folder ID sẽ dễ hơn và chính xác hơn, vì đôi khi có 2 folder được share với mình lại có cùng tên nhưng khác tài khoản.
+    - Bước 1: Lấy ID của folder mong muốn
+
+      1. Mở trình duyệt web và truy cập Google Drive.
+
+      2. Vào mục "Shared with me" (Được chia sẻ với tôi).
+
+      3. Mở folder "data" của tài khoản mà bạn muốn copy.
+
+      4. Nhìn lên thanh địa chỉ (URL) của trình duyệt. Chuỗi ký tự lộn xộn phía sau cùng chính là Folder ID.
+
+        Ví dụ URL là: https://drive.google.com/drive/u/0/folders/1A2b3C4d5E6f7G8h9I0j
+
+        Thì ID là: 1A2b3C4d5E6f7G8h9I0j
+      ```
+      rclone copy "ggdrive:1A2b3C4d5E6f7G8h9I0j" . --drive-shared-with-me --progress
+      ```
+
 ## Thiết lập ssh giữa client và server, khi ở tỉnh thành xa, dùng tailscale
 1. Cùng cài tailscale và run những lệnh sau trên cả máy client và server:
    ```bash
