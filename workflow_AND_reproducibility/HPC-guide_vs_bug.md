@@ -59,6 +59,7 @@ ssh -i ~/.ssh/id_rsa username@server_address
         Ví dụ URL là: https://drive.google.com/drive/u/0/folders/1A2b3C4d5E6f7G8h9I0j
 
         Thì ID là: 1A2b3C4d5E6f7G8h9I0j
+      
       ```
       rclone copy "ggdrive:" . \
       --drive-shared-with-me \
@@ -73,6 +74,7 @@ ssh -i ~/.ssh/id_rsa username@server_address
     --drive-root-folder-id 1A2b3C4d5E6f7G8h9I0j \
     --progress
     ```
+    
   - Tải 2, 3 file trong folder được share:
     ```
     rclone copy "ggdrive:" . \
@@ -81,16 +83,23 @@ ssh -i ~/.ssh/id_rsa username@server_address
     --include "video1.mp4" --include "bao_cao.pdf" \
     --progress    
     ```
+    
   - Tải nhiều file trong folder được share, dùng file danh sách:
     ```
-    rclone copy "ggdrive:1A2b3C4d5E6f7G8h9I0j/file_A" . --files-from list-file.txt --progress
+    rclone copy "ggdrive:" . \
+    --drive-shared-with-me \
+    --drive-root-folder-id 1A2b3C4d5E6f7G8h9I0j \
+    --files-from list-file.txt \
+    --progress  
     ```
+    
     Trong *list-file.txt*, mỗi tên file là 1 dòng:
     ```
     video_tong_ket.mp4
     tai_lieu_2024.pdf
     hinh_anh/logo.png
     ```
+    
     **Lưu ý quan trọng**
     Khi dùng ID, `rclone` coi cái ID đó là gốc của thư mục.  
     Nếu file nằm ngay trong folder đó -> Chỉ cần gõ tên file (`file.txt`).  
