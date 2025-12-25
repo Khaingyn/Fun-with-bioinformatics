@@ -60,16 +60,26 @@ ssh -i ~/.ssh/id_rsa username@server_address
 
         Thì ID là: 1A2b3C4d5E6f7G8h9I0j
       ```
-      rclone copy "ggdrive:1A2b3C4d5E6f7G8h9I0j" . --progress
+      rclone copy "ggdrive:" . \
+      --drive-shared-with-me \
+      --drive-root-folder-id 1A2b3C4d5E6f7G8h9I0j \
+      --progress
       ```
-      (không cần dùng *--drive-shared-with-me* nữa, vì ID là duy nhất)
+
   - Tải 1 file trong folder được share:
     ```
-    rclone copy "ggdrive:1A2b3C4d5E6f7G8h9I0j/file_A" . --progress
+    rclone copy "ggdrive:file_A" . \
+    --drive-shared-with-me \
+    --drive-root-folder-id 1A2b3C4d5E6f7G8h9I0j \
+    --progress
     ```
   - Tải 2, 3 file trong folder được share:
     ```
-    rclone copy "ggdrive:1A2b3C4d5E6f7G8h9I0j/file_A" . --include "video1.mp4" --include "bao_cao.pdf" --progress
+    rclone copy "ggdrive:" . \
+    --drive-shared-with-me \
+    --drive-root-folder-id 1A2b3C4d5E6f7G8h9I0j \
+    --include "video1.mp4" --include "bao_cao.pdf" \
+    --progress    
     ```
   - Tải nhiều file trong folder được share, dùng file danh sách:
     ```
