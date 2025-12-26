@@ -1,6 +1,7 @@
 # High performance computer (HPC)
 
 ## Quy trình sử dụng HPC (lần đầu)
+Trên máy client (máy tính dùng để ssh vào server):
 
 **Bước 1. Tạo key**
 
@@ -13,6 +14,56 @@ ssh -i ~/.ssh/id_rsa username@server_address
 **Bước 3. Submit job bằng công cụ slurm**
 
 **->** Từ lần thứ 2 trở đi thì chỉ cần bắt đầu từ bước 2, không cần phải tạo key nữa.
+
+## Thiết lập ssh giữa client và server, khi ở tỉnh thành xa, dùng tailscale
+1. Cùng cài tailscale và run những lệnh sau trên cả máy client và server:
+   ```bash
+   #Install tailscale
+   curl -fsSL https://tailscale.com/install.sh | sh
+
+   #
+   sudo tailscale up
+   #Sau đó đăng nhập vào link website hiện lên sau dòng lệnh trên
+   #Trên máy client và server đều phải đăng nhập cùng 1 tài khoản
+
+   #Xem ip mới, cũng đều chạy trên client và server
+   tailscale status
+   ```
+2. Từ IP có được từ lệnh `tailscale status`
+   ```bash
+   ssh <user_name>@<IP của server từ tailscale status>
+
+### Tạo 1 user trong server
+Tạo 1 user trong server cho người khác để người đó có thể ssh vào server với tư cách là user đó. Các lệnh sau được thực hiện bơi user có quyền admin (ví dụ: user đầu tiên, được tạo khi cài hệ điều hành ubuntu): 
+
+1. Trên server, tạo 1 user
+  ```
+  sudo adduser user_A
+  ```
+  Trong terminal, sẽ hỏi cài password cho user_A, password này được dùng khi user_A được thêm vào group `sudo` và user_A chạy lệnh nào đó với `sudo`, chẳng hạn như `sudo apt update`.
+2
+2. Thiết lập ssh cho huyha, chuyển sang tư cách user_A
+  ```
+  sudo su - user_A
+  ```
+
+3. Tạo folder `.ssh` trong folder home của huyha
+  ```bash
+  mkdir ~/.ssh
+
+  # 7 -> user/owner (full quyền đọc, ghi, thực thi), 0 -> group (không có quyền gì), 0 -> Others (không có quyền gì)
+  chmod 700 ~/.ssh
+  ```
+
+4. tạo file authorized_ley trong .ssh
+   ```bash
+   nano ~/.ssh/authorized_keys
+   ```
+  dán đoạn mã trong file id_sra.pub mà người dùng user_A đã tạo trên máy client , sau đó set quyền cho file này
+  ```bash
+  # 6 -> user/owner (quyền đọc, ghi), 0 -> group (không có quyền gì), 0 -> Others (không có quyền gì)
+  chmod 600 ~/.ssh/authorized_keys
+  ```
 
 ## Chuyển dữ liệu giữa HPC, local và cloud với nhau
 **1. Chuyển dữ liệu từ HPC sang local**
@@ -100,25 +151,8 @@ ssh -i ~/.ssh/id_rsa username@server_address
     Khi dùng ID, `rclone` coi cái ID đó là gốc của thư mục.  
     Nếu file nằm ngay trong folder đó -> Chỉ cần gõ tên file (`file.txt`).  
     Nếu file nằm trong thư mục con của folder đó -> Phải gõ kèm đường dẫn con (`subfolder/file.txt`).
-    
-## Thiết lập ssh giữa client và server, khi ở tỉnh thành xa, dùng tailscale
-1. Cùng cài tailscale và run những lệnh sau trên cả máy client và server:
-   ```bash
-   #Install tailscale
-   curl -fsSL https://tailscale.com/install.sh | sh
 
-   #
-   sudo tailscale up
-   #Sau đó đăng nhập vào link website hiện lên sau dòng lệnh trên
-   #Trên máy client và server đều phải đăng nhập cùng 1 tài khoản
 
-   #Xem ip mới, cũng đều chạy trên client và server
-   tailscale status
-   ```
-2. Từ IP có được từ lệnh `tailscale status`
-   ```bash
-   ssh <user_name>@<IP của server từ tailscale status>
-   
 ## Một số lệnh hay dùng
 
 ### Xem dung lượng
