@@ -134,3 +134,41 @@ git pull origin main
         ```
         --> duy nhất file git-github.md có sự thay đổi, và nằm trong commit từ show bằng `git log` 
 
+## Agent forwarding: cho server mượn private key ssh của client để ssh vào repo github
+1. Trên máy client
+   Chạy trong terminal:
+    ```
+    # Bật tác vụ ngầm quản lý chìa khóa
+    eval "$(ssh-agent -s)"
+
+    # Nạp chìa khóa vào (thường là id_ed25519 hoặc id_rsa)
+    ssh-add ~/.ssh/id_ed25519
+    ```
+
+    Sau đó sửa file ~/.ssh/config
+   ```
+   Host Ten_Server_Cua_Ban
+    HostName 192.767.1.676  # (IP của server)
+    User jojo               # (Tên đăng nhập của bạn)
+    ForwardAgent yes        # <-- THÊM DÒNG NÀY VÀO ĐÂY
+   ```
+    Rồi ssh vào server, bằng terminal hoặc vscopde đều ok, kiểm tra:
+    ```
+    ssh -T git@github.com
+    ```
+
+    Nếu không sửa file config thì cũng được, nhưng khi đó, ssh vào server phải thêm cờ -A
+
+2. (chưa test) Khi máy client mất mạng, mà trên server đang ở trong tmux, sau đó có mạng thì client ssh vào server lại. Thì đường ống mượn key ban đầu đã cũ, giờ là đường ống mới, phải cập nhật lại để có thể thao tác với repo github nếu như vẫn muốn thao tác trong phiên tmux này
+   sửa file bashcr trên server:
+   ```
+   nano ~/.bashrc
+   ```
+
+   thêm dòng vào cuối file:
+   ```
+   alias fixssh='export SSH_AUTH_SOCK=$(ls -t /tmp/ssh-*/agent.* 2>/dev/null | head -n 1)'
+   ```
+   ctrl+O, enter (lưu lại) -> ctrl+X (thoát). Rồi từ giờ về mà bị mất mạng client, thì cứ gõ `fixssh` trước khi pull/push gì đó.
+
+   
