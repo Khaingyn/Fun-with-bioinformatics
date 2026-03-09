@@ -1,3 +1,35 @@
+# Setup cài nextflow trên server
+## Cài java (17 trở lên)
+1. Có quyền sudo
+2. không có quyền sudo
+   - Cài SDKMAN
+     ```
+     curl -s "https://get.sdkman.io" | bash
+     ```
+
+   - Cài xong, chạy lệnh dưới đây để kích hoạt nó ngay lập tức mà không cần khởi động lại terminal:
+     ```
+     source "$HOME/.sdkman/bin/sdkman-init.sh"
+     ```
+
+   - Cài Java 21 (Bản Temurin tối ưu cho server)
+     ```
+     sdk install java 21.0.2-tem
+     ```
+     (Nó sẽ tự động tải về, giải nén và cấu hình biến môi trường PATH cho riêng bạn).
+
+   - Kiểm tra:
+     ```
+     java -version
+     ```
+## Cài nextflow
+  ```
+  cd ~
+  curl -s https://get.nextflow.io | bash
+  ./nextflow -v
+  ```
+
+
 - **View các folder output trong "work" của các quy trình cũ.**
   - Ví dụ quy trình mới:
     ```
@@ -54,6 +86,7 @@
     "character": "milk"
     }
     ```
+
 
 
 
