@@ -65,7 +65,10 @@ Tất cả các lệnh sau phải được thực hiện khi bạn đang ở lev
     ```
     sau đó bạn lên github website để kiểm tra.
 
-
+    nếu là lần đầu tiên push thì:
+   ```
+   git push -u origin main
+   ```
 
 
 
