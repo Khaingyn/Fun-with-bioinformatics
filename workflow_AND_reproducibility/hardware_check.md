@@ -39,3 +39,15 @@
 ```
 df -h
 ```
+
+# Advanced
+## Config cpu frequency
+1. check
+   ```
+   cpupower frequency-info
+   ```
+2. config
+   ```
+   sudo cpupower frequency-set -d 1.2GHz -u 3.7GHz -g powersave
+   ```
+3. 
