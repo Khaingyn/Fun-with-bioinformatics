@@ -1,4 +1,5 @@
-# antigravity agent
+# Google Antigravity
+## antigravity agent
 - 1
 ```
 nano ~/.local/share/applications/antigravity.desktop
@@ -16,7 +17,7 @@ StartupWMClass=antigravity
 MimeType=x-scheme-handler/antigravity;text/html;
 ```
 
-# antigravity IDE
+## antigravity IDE
 
 - 1
 ```
@@ -38,9 +39,18 @@ Terminal=false
 Categories=Development;IDE;
 StartupWMClass=antigravity-ide
 ```
-# Both
+## Both
 ```
 update-desktop-database ~/.local/share/applications/
 ```
+
+## Update version mới đè lên 
+https://antigravity.google/releases
+1. Tải tar.gz của version mới (lưu ở đâu cũng được, sửa tên file ko còn dấu cách)
+2. cd vào folder của version hiện tại
+3. Chạy giải nén version mới tải về đè vào version cũ
+   ```
+   tar -vxf /path/to/Antigravity_newversion.tar.gz --strip-components=1
+   ```
 
 
