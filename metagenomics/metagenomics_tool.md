@@ -10,3 +10,13 @@
   ## ?
   - SKA2 . Seamless, rapid, and accurate analyses of outbreak genomic data using split k-mer analysis.
     https://github.com/bacpop/ska.rust
+
+## assembly
+- 
+## check
+
+
+# taxa abundace
+- GuaCAMOLE Genomic GC bias correction improves species abundance estimation from metagenomic data https://github.com/Cibiv/GuaCAMOLE, https://www.youtube.com/watch?v=-ZRcMbqCmPo&t=2s
+- 
+# identify & classification
