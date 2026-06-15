@@ -1,6 +1,6 @@
 # High performance computer (HPC)
 
-## Quy trình sử dụng HPC (lần đầu)
+# Quy trình sử dụng HPC (lần đầu)
 Trên máy client (máy tính dùng để ssh vào server):
 
 **Bước 1. Tạo key**
@@ -15,7 +15,7 @@ ssh -i ~/.ssh/id_rsa username@server_address
 
 **->** Từ lần thứ 2 trở đi thì chỉ cần bắt đầu từ bước 2, không cần phải tạo key nữa.
 
-## Thiết lập ssh giữa client và server, khi ở tỉnh thành xa, dùng tailscale
+# Thiết lập ssh giữa client và server, khi ở tỉnh thành xa, dùng tailscale
 1. Cùng cài tailscale và run những lệnh sau trên cả máy client và server:
    ```bash
    #Install tailscale
@@ -33,16 +33,17 @@ ssh -i ~/.ssh/id_rsa username@server_address
    ```bash
    ssh <user_name>@<IP của server từ tailscale status>
 
-### Tạo 1 user trong server
-Tạo 1 user trong server cho người khác để người đó có thể ssh vào server với tư cách là user đó. Các lệnh sau được thực hiện bơi user có quyền admin (ví dụ: user đầu tiên, được tạo khi cài hệ điều hành ubuntu): 
+# Tạo 1 user mới trên server
+Tạo 1 user trong server cho người khác để người đó có thể ssh vào server với tư cách là user đó.  
+Các lệnh sau được thực hiện bởi **user có quyền admin** (ví dụ: user đầu tiên, được tạo khi cài hệ điều hành ubuntu): 
 
-1. Trên server, tạo 1 user
+1. Trên server (admin)
   ```
   sudo adduser user_A
   ```
-  Trong terminal, sẽ hỏi cài password cho user_A, password này được dùng khi user_A được thêm vào group `sudo` và user_A chạy lệnh nào đó với `sudo`, chẳng hạn như `sudo apt update`.
-2
-2. Thiết lập ssh cho huyha, chuyển sang tư cách user_A
+  Nhấn enter hết nếu không muốn cài thông tin gì. Trong terminal, sẽ hỏi cài password cho user_A, password này được dùng khi user_A được thêm vào group `sudo` và user_A chạy lệnh nào đó với `sudo`, chẳng hạn như `sudo apt update`.
+
+2. Thiết lập ssh cho user_A, chuyển sang tư cách user_A
   ```
   sudo su - user_A
   ```
