@@ -1,61 +1,61 @@
 #!/bin/bash
 
-# 1. Kiểm tra quyền root
+# 1. Check for root privileges
 if [ "$EUID" -ne 0 ]; then
-  echo "❌ Lỗi: Bạn phải chạy script này bằng quyền root hoặc sử dụng 'sudo'."
+  echo "❌ Error: You must run this script as root or use 'sudo'."
   exit 1
 fi
 
-# 2. Nhập tên user và tạo tài khoản
-read -p "👤 Nhập tên user mới cần tạo: " USERNAME
+# 2. Input username and create the account
+read -p "👤 Enter the new username to create: " USERNAME
 
 if id "$USERNAME" &>/dev/null; then
-  echo "⚠️ User '$USERNAME' đã tồn tại trên hệ thống!"
+  echo "⚠️ User '$USERNAME' already exists on the system!"
 else
-  echo "⏳ Đang tạo user '$USERNAME'..."
+  echo "⏳ Creating user '$USERNAME'..."
   adduser "$USERNAME"
   if [ $? -ne 0 ]; then
-    echo "❌ Không thể tạo user. Vui lòng kiểm tra lại."
+    echo "❌ Failed to create user. Please check and try again."
     exit 1
   fi
-  echo "✅ Đã tạo user '$USERNAME' thành công."
+  echo "✅ User '$USERNAME' created successfully."
 fi
 
-# 3. Khởi tạo thư mục cấu hình SSH
+# 3. Initialize SSH configuration directory
 USER_HOME="/home/$USERNAME"
 SSH_DIR="$USER_HOME/.ssh"
 AUTH_KEYS="$SSH_DIR/authorized_keys"
 
-echo "📂 Đang cấu hình thư mục SSH..."
+echo "📂 Configuring SSH directory..."
 mkdir -p "$SSH_DIR"
 touch "$AUTH_KEYS"
 
-# 4. Nhập và chuẩn hóa Public Key từ Windows/Linux
+# 4. Input and normalize Public Key from Windows/Linux
 echo "--------------------------------------------------------"
-echo "🔑 Vui lòng copy và DÁN (Paste) chuỗi Public Key của user vào đây."
-echo "   (Chuỗi thường bắt đầu bằng ssh-rsa hoặc ssh-ed25519)"
-echo "   Sau khi dán xong, nhấn Enter rồi bấm tổ hợp phím Ctrl + D để lưu."
+echo "🔑 Please copy and PASTE the user's Public Key here."
+echo "   (The string usually starts with 'ssh-rsa' or 'ssh-ed25519')"
+echo "   After pasting, press Enter, then press Ctrl + D to save."
 echo "--------------------------------------------------------"
 
-# Đọc dữ liệu từ terminal vào file tạm
+# Read terminal input into a temporary file
 cat > /tmp/temp_pub_key
 
-# 💡 Khử sạch ký tự CRLF (^M) của Windows nếu có
+# 💡 Strip out Windows CRLF (^M) line endings if present
 sed -i 's/\r//' /tmp/temp_pub_key
 
-# Ghi vào file cấu hình chính thức
+# Write to the official configuration file
 cat /tmp/temp_pub_key >> "$AUTH_KEYS"
 rm -f /tmp/temp_pub_key
 
-# 5. Phân quyền chuẩn bảo mật SSH (Chống lỗi giải mã Key)
-echo "🛠 Đang phân quyền bảo mật cho thư mục SSH..."
+# 5. Enforce standard SSH security permissions (Prevents Key rejection)
+echo "🛠 Securing SSH directory permissions..."
 chown -R "$USERNAME:$USERNAME" "$SSH_DIR"
 chmod 700 "$SSH_DIR"
 chmod 600 "$AUTH_KEYS"
 
 echo "--------------------------------------------------------"
-echo "🎉 Hoàn thành thiết lập cho user thường: $USERNAME"
-echo "📂 Thư mục SSH: $SSH_DIR (Quyền: 700 - drwx------)"
-echo "📄 File Authorized Keys (Quyền: 600 - -rw-------)"
-echo "🚀 Giờ user có thể dùng VS Code hoặc Terminal Windows vào thẳng!"
+echo "🎉 Setup completed for standard user: $USERNAME"
+echo "📂 SSH Directory: $SSH_DIR (Permissions: 700 - drwx------)"
+echo "📄 Authorized Keys File (Permissions: 600 - -rw-------)"
+echo "🚀 The user can now connect directly via VS Code or Windows Terminal!"
 echo "--------------------------------------------------------"
