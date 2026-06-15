@@ -1,4 +1,4 @@
-## Stress cpu and RAM
+# Stress cpu and RAM
 1. Install tool
    ```
    sudo apt update && sudo apt install stress-ng
@@ -11,7 +11,7 @@
    `--vm-bytes`: ratio of memory
    `--timeout`: time of test
 
-## Check Temperature: CPU, RAM, NVME
+# Check Temperature: CPU, RAM, NVME
 1. Install tool
    ```
    sudo apt update
@@ -31,11 +31,22 @@
    watch -n 1 sensors
    ```
 
-## View HDD, SSD is installed
+# View HDD, SSD is installed
   ```
   lsblk
   ```
-### View hard drive is formatted
+# Reversed block ext4 format hard drive
+- Check
+  ```
+  sudo tune2fs -l /dev/sda1 | grep -E "Block count|Reserved block count"
+  ```
+
+- Change to 0%
+  ```
+  sudo tune2fs -m 0 /dev/sda1
+  ```
+
+# View hard drive is formatted
 ```
 df -h
 ```
