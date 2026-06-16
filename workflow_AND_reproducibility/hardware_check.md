@@ -30,12 +30,12 @@
    ```
    watch -n 1 sensors
    ```
-
-# View HDD, SSD is installed
+# Hard Drive (SSD, HDD)
+## View HDD, SSD is installed
   ```
   lsblk
   ```
-# Reversed block ext4 format hard drive
+## Reversed block ext4 format hard drive
 - Check
   ```
   sudo tune2fs -l /dev/sda1 | grep -E "Block count|Reserved block count"
@@ -46,11 +46,39 @@
   sudo tune2fs -m 0 /dev/sda1
   ```
 
-# View hard drive is formatted
+## View hard drive is formatted
 ```
 df -h
 ```
+# Memory/RAM
+## swapfile
+- Turn off
+   ```
+   sudo swapoff -v /swapfile
+   ```
+   
+- Config fstab
+  ```
+  sudo nano /etc/fstab
+  ```
+  Cmt # or remove line:
+  ```
+  /swapfile   none    swap    sw    0   0
+  ```
 
+- Remove swapfile
+  ```
+  sudo rm -v /swapfile
+  ```
+
+- Check
+  ```
+  free -h
+  ```
+  or
+  ```
+  swapon --show
+  ```
 # Advanced
 ## Config cpu frequency
 1. check
