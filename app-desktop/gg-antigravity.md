@@ -21,14 +21,21 @@ MimeType=x-scheme-handler/antigravity;text/html;
 
 - 1
 ```
- nano ~/.local/share/applications/antigravity-ide.desktop
+sudo chown root:root /home/khai/AntigravityIDE/chrome-sandbox
+sudo chmod 4755 /home/khai/AntigravityIDE/chrome-sandbox
 ```
 
 - 2
 ```
 sudo cp /home/jojo/AntigravityIDE/resources/app/resources/linux/code.png /usr/share/pixmaps/antigravity-ide.png
 ```
+
 - 3
+```
+ nano ~/.local/share/applications/antigravity-ide.desktop
+```
+
+-4
 ```
 [Desktop Entry]
 Name=Antigravity IDE
