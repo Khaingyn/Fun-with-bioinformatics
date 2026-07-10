@@ -1,0 +1,33 @@
+bị xé hình trên laptop dùng iGPU AMD (ví dụ 780M)
+
+Cách 1: Thêm tham số Kernel để ép card AMD đồng bộ khung hình
+```
+sudo nano /etc/default/grub
+```
+
+Tìm đến dòng có chữ: GRUB_CMDLINE_LINUX_DEFAULT="quiet splash"  
+Khải chỉnh sửa dòng đó, thêm tham số amdgpu.dcfeaturemask=0x2 hoặc amdgpu.sg_display=0 vào  
+để sửa lỗi xử lý màn hình của driver AMD. Dòng đó sẽ biến thành:
+
+```
+GRUB_CMDLINE_LINUX_DEFAULT="quiet splash amdgpu.sg_display=0"
+```
+```
+sudo update-grub
+```
+-> reset lại máy
+
+Cách 2: Tắt tính năng Tiết kiệm điện cho màn hình (Panel Self Refresh - PSR)
+
+Chip AMD Ryzen đời mới có một công nghệ gọi là PSR (Panel Self Refresh). Khi màn hình hiển thị hình ảnh tĩnh (như khi Khải đang đọc code, không cuộn chuột), 
+CPU sẽ ngắt tín hiệu đẩy sang màn hình để tiết kiệm điện. Khi Khải cuộn chuột trở lại, nó bật lên đột ngột gây ra hiện tượng đứt gãy khung hình chạy dọc màn hình.
+Khải tắt tính năng này đi bằng cách:
+
+```
+sudo nano /etc/modprobe.d/amdgpu.conf
+```
+
+```
+options amdgpu psr=0
+```
+-> reset lại
