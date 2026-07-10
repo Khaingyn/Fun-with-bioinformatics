@@ -1,0 +1,15 @@
+Ép hệ thống lưu độ sáng bằng systemd-backlight  
+Ubuntu quản lý việc lưu độ sáng thông qua dịch vụ systemd-backlight.  
+Đôi khi file cấu hình cũ bị lỗi khiến nó không ghi đè được mức độ sáng mới.
+
+```
+sudo rm /var/lib/systemd/backlight/*
+```
+
+Khi bạn chạy lệnh xóa (sudo rm /var/lib/systemd/backlight/*),   
+bạn chỉ đang xóa đi cái file bộ nhớ đệm (cache) đang bị lỗi hoặc bị "kẹt" của hệ thống.  
+Sau khi xóa: Mỗi lần bạn thay đổi độ sáng (dù là dùng phím tắt, kéo thanh trượt lên 50%,   
+rồi đổi ý kéo lên 80%, hay hạ xuống 30%), Ubuntu sẽ liên tục cập nhật và ghi đè giá trị mới nhất vào một file cấu hình mới sạch sẽ.  
+Khi tắt máy: Hệ thống sẽ xem giá trị cuối cùng ngay trước lúc bạn tắt máy là bao nhiêu (ví dụ lúc đó bạn đang để 80%),   
+nó sẽ lưu đúng con số 80% đó vào ổ cứng.  
+Khi mở máy lại: systemd-backlight sẽ đọc file này và trả lại đúng mức 80% cho bạn.
