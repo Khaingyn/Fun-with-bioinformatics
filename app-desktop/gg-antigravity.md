@@ -46,6 +46,12 @@ Terminal=false
 Categories=Development;IDE;
 StartupWMClass=antigravity-ide
 ```
+
+```
+chmod +x ~/.local/share/applications/antigravity-ide.desktop
+```
+
+
 ## Both
 ```
 update-desktop-database ~/.local/share/applications/
