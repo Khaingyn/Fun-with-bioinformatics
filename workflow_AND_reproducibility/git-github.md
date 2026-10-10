@@ -174,4 +174,12 @@ git pull origin main
    ```
    ctrl+O, enter (lưu lại) -> ctrl+X (thoát). Rồi từ giờ về mà bị mất mạng client, thì cứ gõ `fixssh` trước khi pull/push gì đó.
 
-   
+3. Từ windows 11 ssh vào server linux. Nếu forward agent không hoạt động:
+- Mở powershell với quyền admin, chạy:
+  ```
+  # Bật dịch vụ ssh-agent tự khởi động cùng Windows
+  Get-Service ssh-agent | Set-Service -StartupType Automatic
+  Start-Service ssh-agent
+  # Nạp private key vào agent
+  ssh-add C:\Users\nguye\.ssh\id_rsa
+  ```
